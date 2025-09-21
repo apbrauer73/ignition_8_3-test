@@ -1,0 +1,576 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 585,
+      "width": 739
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "600"
+              },
+              "target": "tab",
+              "text": "Transforms",
+              "url": "https://links.inductiveautomation.com/81-transforms"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "Transforms allow you to alter the value returned from a binding. For example, you can bind an overlay\u0027s color property to an integer tag and use a transform to map that numerical value to a particular color, all from the binding interface. \nMultiple transforms can be combined, chaining them together. They will be executed in order, from top to bottom, with each result sent to the next transform in the series. There are four different transforms available."
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Raw Value"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"Raw Value: \" + {value}",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Raw Value"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "props": {
+              "justify": "center",
+              "style": {
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Heading"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontWeight": "bold",
+                        "marginBottom": "10px",
+                        "marginTop": "5px",
+                        "textAlign": "center"
+                      },
+                      "target": "tab",
+                      "text": "Map Transform",
+                      "url": "https://links.inductiveautomation.com/81-map-transform"
+                    },
+                    "type": "ia.navigation.link"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "60px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.color": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "#0000FF",
+                              "inputType": "range",
+                              "mappings": [
+                                {
+                                  "input": {
+                                    "max": 25,
+                                    "min": 0
+                                  },
+                                  "output": "#800000"
+                                },
+                                {
+                                  "input": {
+                                    "max": 50,
+                                    "min": 25
+                                  },
+                                  "output": "#FF8C00"
+                                },
+                                {
+                                  "input": {
+                                    "max": 75,
+                                    "min": 50
+                                  },
+                                  "output": "#D9D900"
+                                },
+                                {
+                                  "input": {
+                                    "max": 100,
+                                    "min": 75
+                                  },
+                                  "output": "#00D900"
+                                }
+                              ],
+                              "outputType": "color",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "path": "material/report",
+                      "style": {
+                        "marginBottom": "20px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "Performance Note"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontStyle": "italic",
+                        "textAlign": "center"
+                      },
+                      "text": "This is a very fast Transform type."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Map"
+                },
+                "position": {
+                  "basis": "270px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignContent": "flex-start",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "160px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Heading"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontWeight": "bold",
+                        "marginBottom": "10px",
+                        "marginTop": "5px",
+                        "textAlign": "center"
+                      },
+                      "target": "tab",
+                      "text": "Format Transform",
+                      "url": "https://links.inductiveautomation.com/81-format-transform"
+                    },
+                    "type": "ia.navigation.link"
+                  },
+                  {
+                    "meta": {
+                      "name": "Value"
+                    },
+                    "position": {
+                      "basis": "50px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                          },
+                          "transforms": [
+                            {
+                              "formatType": "numeric",
+                              "formatValue": "0.000",
+                              "type": "format"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "marginBottom": "30px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Performance Note"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontStyle": "italic",
+                        "textAlign": "center"
+                      },
+                      "text": "This is a very fast Transform type."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Format"
+                },
+                "position": {
+                  "basis": "270px"
+                },
+                "props": {
+                  "alignContent": "flex-start",
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "160px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Heading"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontWeight": "bold",
+                        "marginBottom": "10px",
+                        "marginTop": "5px",
+                        "textAlign": "center"
+                      },
+                      "target": "tab",
+                      "text": "Expression Transform",
+                      "url": "https://links.inductiveautomation.com/81-expression-transform"
+                    },
+                    "type": "ia.navigation.link"
+                  },
+                  {
+                    "meta": {
+                      "name": "Value"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "if({value} \u003e 50.0, \"The value is greater than 50.\", \"The value is less than 50.\") ",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "marginBottom": "50px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Performance Note"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontStyle": "italic",
+                        "textAlign": "center"
+                      },
+                      "text": "This is a fast Transform type."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Expression"
+                },
+                "position": {
+                  "basis": "270px"
+                },
+                "props": {
+                  "alignContent": "flex-start",
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "160px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Heading"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontWeight": "bold",
+                        "marginBottom": "10px",
+                        "marginTop": "5px",
+                        "textAlign": "center"
+                      },
+                      "target": "tab",
+                      "text": "Script Transform",
+                      "url": "https://links.inductiveautomation.com/81-script-transform"
+                    },
+                    "type": "ia.navigation.link"
+                  },
+                  {
+                    "meta": {
+                      "name": "Value"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Random/RandomDouble2"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\t\n\treturn \"The square of the value is %0.2f\" %(value*value)",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "marginBottom": "10px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Performance Note"
+                    },
+                    "position": {
+                      "basis": "68px"
+                    },
+                    "props": {
+                      "style": {
+                        "fontStyle": "italic",
+                        "textAlign": "center"
+                      },
+                      "text": "This is a slower Transform type.  Use this when the other 3 types aren\u0027t an option."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Script"
+                },
+                "position": {
+                  "basis": "270px"
+                },
+                "props": {
+                  "alignContent": "flex-start",
+                  "alignItems": "center",
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "height": "160px",
+                    "marginBottom": "20px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Examples"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "flex-start",
+              "justify": "space-evenly",
+              "style": {
+                "overflow": "visible",
+                "padding": "10px"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Perspective Features/Transforms",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

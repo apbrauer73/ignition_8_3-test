@@ -1,0 +1,36 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Embedded View"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "label": "sidebar"
+          },
+          "path": "Layouts/Framework/Container Label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "Flex D"
+    },
+    "props": {
+      "alignItems": "center",
+      "justify": "center",
+      "style": {
+        "classes": "layouts/container-D"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

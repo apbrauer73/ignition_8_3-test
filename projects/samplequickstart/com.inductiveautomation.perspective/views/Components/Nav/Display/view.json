@@ -1,0 +1,984 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1152,
+      "width": 256
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "basis": "100%",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.items[0].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/alarm-journal-table",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[10].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/label",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[11].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/led-display",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[12].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/linear-scale",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[13].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/map",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[14].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/markdown",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[15].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/moving-analog-indicator",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[16].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/pdf-viewer",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[17].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/progress",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[18].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/sparkline",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[19].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/table",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[1].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/alarm-status-table",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[20].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/tag-browse-tree",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[21].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/thermometer",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[22].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/tree",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[23].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/video-player",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[2].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/audio",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[3].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/barcode",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[4].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/cylindrical-tank",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[5].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/dashboard",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[6].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/equipment-schedule",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[7].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/icon",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[8].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/image",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[9].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "framework/sidebar-items",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/components/display/inline-frame",
+                      "output": "framework/sidebar-items-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "itemStyle": {
+            "classes": "framework/sidebar-items"
+          },
+          "items": [
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-alarmJournalTable"
+                },
+                "text": "Alarm Journal Table"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/alarm-journal-table",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-alarmStatusTable"
+                },
+                "text": "Alarm Status Table"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/alarm-status-table",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-audio"
+                },
+                "text": "Audio"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/audio",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-barcode"
+                },
+                "text": "Barcode"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/barcode",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-cylindricalTank"
+                },
+                "text": "Cylindrical Tank"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/cylindrical-tank",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-dashboard"
+                },
+                "text": "Dashboard"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/dashboard",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-equipmentScheduler"
+                },
+                "text": "Equipment Schedule"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/equipment-schedule",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-icon"
+                },
+                "text": "Icon"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/icon",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-image"
+                },
+                "text": "Image"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/image",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-inlineFrame"
+                },
+                "text": "Inline Frame"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/inline-frame",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-label"
+                },
+                "text": "Label"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/label",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-ledDisplay"
+                },
+                "text": "LED Display"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/led-display",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-linearScale"
+                },
+                "text": "Linear Scale"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/linear-scale",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-map"
+                },
+                "text": "Map"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/map",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-markdown"
+                },
+                "text": "Markdown"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/markdown",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-movingAnalogIndicator"
+                },
+                "text": "Moving Analog Indicator"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/moving-analog-indicator",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-pdfViewer"
+                },
+                "text": "PDF Viewer"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/pdf-viewer",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-progress"
+                },
+                "text": "Progress"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/progress",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-spark"
+                },
+                "text": "Sparkline"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/sparkline",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-table"
+                },
+                "text": "Table"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/table",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-tagBrowseTree"
+                },
+                "text": "Tag Browse Tree"
+              },
+              "navIcon": {
+                "color": "",
+                "path": ""
+              },
+              "resetOnClick": false,
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/tag-browse-tree",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-thermometer"
+                },
+                "text": "Thermometer"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/thermometer",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-tree"
+                },
+                "text": "Tree"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/tree",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "icon": {
+                  "path": "sample-components/display-videoPlayer"
+                },
+                "text": "Video Player"
+              },
+              "navIcon": {
+                "path": ""
+              },
+              "showHeader": true,
+              "style": {},
+              "target": "/components/display/video-player",
+              "visible": true
+            }
+          ]
+        },
+        "type": "ia.navigation.menutree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

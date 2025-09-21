@@ -1,0 +1,82 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine6",
+    "dataType": "Int8",
+    "name": "Sine6",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine7",
+    "dataType": "Int8",
+    "name": "Sine7",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine9",
+    "dataType": "Float8",
+    "name": "Sine9",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine5",
+    "dataType": "Int4",
+    "name": "Sine5",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine3",
+    "dataType": "Float8",
+    "name": "Sine3",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine8",
+    "dataType": "Float8",
+    "name": "Sine8",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine1",
+    "dataType": "Float4",
+    "name": "Sine1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine2",
+    "dataType": "Float8",
+    "name": "Sine2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine0",
+    "dataType": "Float4",
+    "name": "Sine0",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Sine/Sine4",
+    "dataType": "Int4",
+    "name": "Sine4",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

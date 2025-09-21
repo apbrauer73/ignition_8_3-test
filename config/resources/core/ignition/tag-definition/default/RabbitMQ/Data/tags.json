@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "memory",
+    "valuePersistence": "Configuration",
+    "dataType": "String",
+    "name": "action",
+    "value": "up",
+    "tagType": "AtomicTag"
+  }
+]

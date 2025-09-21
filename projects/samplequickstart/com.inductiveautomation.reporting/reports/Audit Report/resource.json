@@ -1,0 +1,16 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "data.bin"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "bfischer",
+      "timestamp": "2022-04-20T18:27:19Z"
+    },
+    "lastModificationSignature": "1dec2bdafa15d48a0665fb4e3c55773ceb5833940602f8804c3e265f73f7f92e"
+  }
+}

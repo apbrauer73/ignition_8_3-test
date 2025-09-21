@@ -1,0 +1,124 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Tab",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-tab-container"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "A Tab container is a relatively simple layout option. Tabs run along the top of the container and can be individually enabled/disabled. You can configure and select a distinct embedded view, container, or component for each tab."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Tab 2"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-C layouts/container-label",
+                "margin": "10px"
+              },
+              "text": "Tab View 2"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "hasDelegate": true,
+              "name": "Tab 1"
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-D layouts/container-label",
+                "margin": "10px"
+              },
+              "text": "Tab View 1"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Tab 3"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "style": {
+                "classes": "layouts/container-B layouts/container-label",
+                "margin": "10px"
+              },
+              "text": "Tab View 3"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Tab Container"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "marginTop": "20px"
+          },
+          "tabs": [
+            {
+              "disabled": false,
+              "text": "Tab 1"
+            },
+            {
+              "disabled": false,
+              "text": "Tab 2"
+            },
+            {
+              "disabled": true,
+              "text": "Tab 3"
+            }
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

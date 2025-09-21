@@ -1,0 +1,197 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 597
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Chart Range Selector",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-chart-range-selector "
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Chart Range Selector component is a small recreation of a chart that operators can use to intelligently select a time range based on seeing the existing data. This component complements the Time Series Chart component. It is highly customizeable in regards to color schemes, styles, and more."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Chart Range Selector"
+            },
+            "position": {
+              "basis": "180.5px"
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "aggregate": "MinMax",
+                    "avoidScanClassValidation": true,
+                    "dateRange": {
+                      "endDate": "now(0)",
+                      "startDate": "dateArithmetic(now(0), -1, \u0027hour\u0027)"
+                    },
+                    "ignoreBadQuality": false,
+                    "preventInterpolation": false,
+                    "returnFormat": "Wide",
+                    "returnSize": {
+                      "numRows": "100",
+                      "type": "FIXED"
+                    },
+                    "tags": [
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic0"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic1"
+                      },
+                      {
+                        "path": "[Sample_Tags]Realistic/Realistic2"
+                      }
+                    ],
+                    "valueFormat": "DATASET"
+                  },
+                  "type": "tag-history"
+                }
+              },
+              "props.selectedRange": {
+                "binding": {
+                  "config": {
+                    "expression": "now(0)"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn {\u0027start\u0027: system.date.addMinutes(value, -15), \u0027end\u0027:system.date.addMinutes(value, -5)}",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "areaStyles": {
+                "colorScheme": "YlGnBu"
+              }
+            },
+            "type": "ia.chart.chartrangeselector"
+          },
+          {
+            "meta": {
+              "name": "Time Series Chart"
+            },
+            "position": {
+              "basis": "180px"
+            },
+            "propConfig": {
+              "props.series[0].data": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "endTime": "{../Chart Range Selector.props.selectedRange.end}",
+                      "startTime": "{../Chart Range Selector.props.selectedRange.start}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttags \u003d [\u0027[Sample_Tags]Realistic/Realistic0\u0027, \u0027[Sample_Tags]Realistic/Realistic1\u0027, \u0027[Sample_Tags]Realistic/Realistic2\u0027]\n\treturn system.tag.queryTagHistory(paths\u003dtags, startDate\u003dvalue[\u0027startTime\u0027], endDate\u003dvalue[\u0027endTime\u0027], returnFormat\u003d\"Wide\", intervalMinutes\u003d1)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              }
+            },
+            "props": {
+              "defaultStyles": {
+                "colorScheme": "YlGnBu",
+                "normal": {
+                  "stroke": {
+                    "width": 2
+                  }
+                }
+              },
+              "series": [
+                {
+                  "name": "Boiler"
+                }
+              ],
+              "title": {
+                "visible": true
+              }
+            },
+            "type": "ia.chart.timeseries"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "476.5px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "justify": "space-evenly",
+          "style": {
+            "marginTop": 10,
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

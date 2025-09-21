@@ -1,0 +1,1437 @@
+{
+  "pages": {
+    "/": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Home/Welcome"
+    },
+    "/components": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Components/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Components/Landing Page"
+    },
+    "/components/:folder/:componentView": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Components/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Components/Landing Page"
+    },
+    "/ignition-101": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": true,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Home/Welcome"
+    },
+    "/ignition-101/application/": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Realtime Control"
+    },
+    "/ignition-101/application/alarming": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Alarming"
+    },
+    "/ignition-101/application/data-entry": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Data Entry"
+    },
+    "/ignition-101/application/historical-data": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Historical Data"
+    },
+    "/ignition-101/application/realtime-control": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Realtime Control"
+    },
+    "/ignition-101/application/reports": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Application/Reports"
+    },
+    "/ignition-101/home/about": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Home/About"
+    },
+    "/ignition-101/home/welcome": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Home/Welcome"
+    },
+    "/ignition-101/perspective-features/bindings": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Bindings"
+    },
+    "/ignition-101/perspective-features/containers": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Containers"
+    },
+    "/ignition-101/perspective-features/embedded-views": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Embedded Views"
+    },
+    "/ignition-101/perspective-features/events-actions": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Events Actions"
+    },
+    "/ignition-101/perspective-features/localization": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Localization"
+    },
+    "/ignition-101/perspective-features/message-handler": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Message Handler"
+    },
+    "/ignition-101/perspective-features/navigation": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Navigation"
+    },
+    "/ignition-101/perspective-features/perspective-app": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Perspective App"
+    },
+    "/ignition-101/perspective-features/themes-styles": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Themes Styles"
+    },
+    "/ignition-101/perspective-features/transforms": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 260,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Feature Views/Perspective Features/Transforms"
+    },
+    "/layouts": {
+      "docks": {
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Layouts/Landing Page"
+    },
+    "/layouts/coordinate": {
+      "title": "",
+      "viewPath": "Layouts/Coordinate/Main"
+    },
+    "/layouts/fluid": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Layouts/Fluid/Sidebar"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "show",
+            "iconUrl": "material/info",
+            "id": "layout-info",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 256,
+            "viewParams": {
+              "desc": "A fluid layout relying on the column container to reflow the content.",
+              "title": "Fluid Columns"
+            },
+            "viewPath": "Layouts/Dock Layout Info"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-header",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 80,
+            "viewParams": {},
+            "viewPath": "Layouts/Fluid/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Layouts/Fluid/Content"
+    },
+    "/layouts/fluid-max-width": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Layouts/Fluid/Sidebar"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "fluid-header",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 80,
+            "viewParams": {},
+            "viewPath": "Layouts/Fluid/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Layouts/Fluid/Main"
+    },
+    "/layouts/grid": {
+      "viewPath": "Layouts/Grid/Main"
+    },
+    "/layouts/panes": {
+      "title": "",
+      "viewPath": "Layouts/Panes/Main"
+    },
+    "/layouts/scrollable-canvas": {
+      "docks": {
+        "bottom": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "deets",
+            "modal": false,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 200,
+            "viewParams": {
+              "label": "value",
+              "styleClass": "value"
+            },
+            "viewPath": "Layouts/Scrollable/Sidebar"
+          }
+        ],
+        "cornerPriority": "left-right",
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 800,
+            "content": "push",
+            "handle": "show",
+            "iconUrl": "material/menu",
+            "id": "scrollable-sidebar",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {
+              "label": "on-demand view"
+            },
+            "viewPath": "Layouts/Scrollable/Sidebar"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Layouts/Scrollable/Main"
+    },
+    "/old/ignition-101/:folder/:featureView": {
+      "docks": {
+        "left": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 900,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "Menu",
+            "modal": false,
+            "resizable": false,
+            "show": "auto",
+            "size": 256,
+            "viewParams": {},
+            "viewPath": "Ignition 101/Nav/Sidebar Dock Nav"
+          }
+        ],
+        "right": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "cover",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "dock-main-nav",
+            "modal": true,
+            "resizable": false,
+            "show": "onDemand",
+            "size": 300,
+            "viewParams": {},
+            "viewPath": "Framework/Dock Main Nav"
+          }
+        ],
+        "top": [
+          {
+            "anchor": "fixed",
+            "autoBreakpoint": 480,
+            "content": "push",
+            "handle": "hide",
+            "iconUrl": "",
+            "id": "",
+            "modal": false,
+            "resizable": false,
+            "show": "visible",
+            "size": 56,
+            "viewParams": {},
+            "viewPath": "Framework/Header"
+          }
+        ]
+      },
+      "title": "",
+      "viewPath": "Ignition 101/Landing Page"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom"
+  }
+}

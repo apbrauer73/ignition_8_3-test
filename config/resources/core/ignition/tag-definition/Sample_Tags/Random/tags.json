@@ -1,0 +1,82 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomShort2",
+    "dataType": "Int2",
+    "name": "RandomShort2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomShort1",
+    "dataType": "Int2",
+    "name": "RandomShort1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomDouble2",
+    "dataType": "Float8",
+    "name": "RandomDouble2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomInteger1",
+    "dataType": "Int4",
+    "name": "RandomInteger1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomLong2",
+    "dataType": "Int8",
+    "name": "RandomLong2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomDouble1",
+    "dataType": "Float8",
+    "name": "RandomDouble1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomLong1",
+    "dataType": "Int8",
+    "name": "RandomLong1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomBoolean1",
+    "dataType": "Boolean",
+    "name": "RandomBoolean1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomInteger2",
+    "dataType": "Int4",
+    "name": "RandomInteger2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Random/RandomBoolean2",
+    "dataType": "Boolean",
+    "name": "RandomBoolean2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

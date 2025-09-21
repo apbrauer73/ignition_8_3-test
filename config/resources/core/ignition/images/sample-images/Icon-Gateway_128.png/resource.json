@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "Icon-Gateway_128.png"
+  ],
+  "attributes": {
+    "size": 10231,
+    "lastModificationSignature": "0f31966d9bb5d8fdcdafa3d575b2527bb368340dfb12a67b22c901e8dc83a6d3",
+    "width": -1,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "quickstart",
+      "timestamp": "2025-09-02T01:44:23Z"
+    },
+    "height": -1
+  }
+}

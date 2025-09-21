@@ -1,0 +1,40 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "ef00a76849fb0e502d213c5898eb04b9a3fcaf305fb6ffb124f14e9acfbcdb41",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "bfischer",
+      "timestamp": "2022-07-15T20:56:56Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "tankNo",
+        "sqlType": 2
+      }
+    ]
+  }
+}

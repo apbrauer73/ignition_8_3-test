@@ -1,0 +1,1750 @@
+{
+  "custom": {
+    "mode": "edit",
+    "tankInfo": {
+      "tankInUse": 1,
+      "tankMaxVol": 1000,
+      "tankName": "Fresh Mix",
+      "tankNo": 200,
+      "tankType": "Mix Tank",
+      "tankVol": 800
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.mode": {
+      "persistent": true
+    },
+    "custom.tankInfo": {
+      "persistent": true
+    },
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1115,
+      "width": 1125
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "top",
+              "text": "Data Entry",
+              "textStyle": {
+                "fontSize": "20px",
+                "fontWeight": "600"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "marginBottom": "15px",
+                "overflow": "auto"
+              },
+              "text": "Access to databases is built right into the Ignition platform.  The example below demonstrates using Named Queries along with a little scripting to allow for easy form entry.  It also demonstrates a combination of flex and column containers to dynamically grow and shrink the entry form and table. Simple data validation is done on the Add/Save button to ensure all fields are populated.  Clicking the Add, Edit, and Delete buttons below the table toggle visibility of the Tank Entry Form / Delete Confirmation.  "
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Table"
+                },
+                "position": {
+                  "basis": "250px"
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "queryPath": "Ignition 101/Data Entry/Tank List"
+                      },
+                      "type": "query"
+                    }
+                  }
+                },
+                "props": {
+                  "cells": {
+                    "style": {
+                      "paddingLeft": "5px"
+                    }
+                  },
+                  "columns": [
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankNo",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": "",
+                          "paddingLeft": "0px"
+                        },
+                        "title": "Tank #"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": "",
+                        "paddingLeft": "5px"
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": 40
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankType",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Tank Type"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankName",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Tank Name"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankVol",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Volume"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankMaxVol",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Max Volume"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "tankInUse",
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "In Use"
+                      },
+                      "justify": "auto",
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "boolean",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": 40
+                    }
+                  ],
+                  "emptyMessage": {
+                    "noData": {
+                      "icon": {
+                        "path": "material/error_outline"
+                      },
+                      "text": "No Data Found"
+                    }
+                  },
+                  "pager": {
+                    "initialOption": 5
+                  },
+                  "style": {
+                    "margin": "5px"
+                  }
+                },
+                "scripts": {
+                  "customMethods": [],
+                  "extensionFunctions": null,
+                  "messageHandlers": [
+                    {
+                      "messageType": "refresh-tank-list",
+                      "pageScope": true,
+                      "script": "\tself.refreshBinding(\"props.data\")\n\tself.props.selection.selectedRow \u003d None",
+                      "sessionScope": false,
+                      "viewScope": false
+                    }
+                  ]
+                },
+                "type": "ia.display.table"
+              },
+              {
+                "children": [
+                  {
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "config": {
+                            "script": "\t# Clear entry fields\n\ttankInfo \u003d {\n\t  \"tankInUse\": 0,\n\t  \"tankMaxVol\": None,\n\t  \"tankName\": \"\",\n\t  \"tankNo\": None,\n\t  \"tankVol\": None,\n\t  \"tankType\": \"\"\n\t}\n\t\n\tself.view.custom.tankInfo \u003d tankInfo\n\t\n\tself.view.custom.mode \u003d \u0027add\u0027\n\t\n\t# Hide Delete Confirmation container\n\tself.parent.parent.getChild(\"Delete Confirmation\").position.display \u003d False\n\t\n\t# Display Tank Entry Form container\n\tself.parent.parent.getChild(\"Entry Form\").position.display \u003d True"
+                          },
+                          "scope": "G",
+                          "type": "script"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Add"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "image": {
+                        "icon": {
+                          "path": "material/add"
+                        }
+                      },
+                      "style": {
+                        "fontSize": "1.2em"
+                      },
+                      "text": "Add"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "config": {
+                            "script": "\t# Set the entry form mode to \u0027edit\u0027\n\tself.view.custom.mode \u003d \u0027edit\u0027\n\t\n\t# Copy the tank info from the selected row to the custom property\n\tself.view.custom.tankInfo \u003d self.parent.parent.getChild(\"Table\").props.selection.data[0]\n\t\n\t# Hide the Delete Confirmation container\n\tself.parent.parent.getChild(\"Delete Confirmation\").position.display \u003d False\n\t\n\t# Display the Entry Form container\n\tself.parent.parent.getChild(\"Entry Form\").position.display \u003d True"
+                          },
+                          "scope": "G",
+                          "type": "script"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Edit",
+                      "tooltip": {
+                        "text": "Select a record in the table"
+                      }
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "meta.tooltip.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": ".../Table.props.selection.selectedRow"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": null,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": ".../Table.props.selection.selectedRow"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": true,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": null,
+                                  "output": false
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "image": {
+                        "icon": {
+                          "path": "material/edit"
+                        }
+                      },
+                      "primary": false,
+                      "style": {
+                        "fontSize": "1.2em",
+                        "marginLeft": "5px",
+                        "marginRight": "5px"
+                      },
+                      "text": "Edit"
+                    },
+                    "type": "ia.input.button"
+                  },
+                  {
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "config": {
+                            "script": "\t# Hide the Entry Form container\n\tself.parent.parent.getChild(\"Entry Form\").position.display \u003d False\n\t\n\t# Display the Delete Confirmation container\n\tself.parent.parent.getChild(\"Delete Confirmation\").position.display \u003d True"
+                          },
+                          "scope": "G",
+                          "type": "script"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Delete",
+                      "tooltip": {
+                        "text": "Select a record in the table"
+                      }
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "meta.tooltip.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": ".../Table.props.selection.selectedRow"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": null,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.enabled": {
+                        "binding": {
+                          "config": {
+                            "path": ".../Table.props.selection.selectedRow"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": true,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": null,
+                                  "output": false
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "image": {
+                        "icon": {
+                          "path": "material/delete"
+                        }
+                      },
+                      "primary": false,
+                      "style": {
+                        "fontSize": "1.2em"
+                      },
+                      "text": "Delete"
+                    },
+                    "type": "ia.input.button"
+                  }
+                ],
+                "meta": {
+                  "name": "Flex Container"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "justify": "center",
+                  "style": {
+                    "marginBottom": "5px",
+                    "marginLeft": "5px",
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Title"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "components/title-label typography/list-heading"
+                      },
+                      "text": "Tank Entry Form",
+                      "textStyle": {
+                        "fontSize": "1.5em",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Tank Label"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 0.5,
+                              "rowIndex": 0,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "md",
+                              "order": 0,
+                              "rowIndex": 0,
+                              "span": 2
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "lg",
+                              "order": 0,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "props": {
+                          "text": "Tank #",
+                          "textStyle": {
+                            "textAlign": "end"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Number"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 0,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 2,
+                              "name": "md",
+                              "order": 1,
+                              "rowIndex": 0,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 2,
+                              "name": "lg",
+                              "order": 1,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.enabled": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.mode"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": false,
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": "add",
+                                      "output": true
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          },
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankNo"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "format": "0,0"
+                        },
+                        "type": "ia.input.numeric-entry-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Type Label"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 0,
+                              "rowIndex": 1,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 6,
+                              "name": "md",
+                              "order": 1.5,
+                              "rowIndex": 0,
+                              "span": 2
+                            },
+                            {
+                              "colIndex": 4,
+                              "name": "lg",
+                              "order": 2,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "props": {
+                          "text": "Tank Type",
+                          "textStyle": {
+                            "textAlign": "end"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Type"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 1,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 8,
+                              "name": "md",
+                              "order": 2,
+                              "rowIndex": 0,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 6,
+                              "name": "lg",
+                              "order": 3,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankType"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "options": [
+                            {
+                              "label": "Blend Tank",
+                              "value": "Blend Tank"
+                            },
+                            {
+                              "label": "Mix Tank",
+                              "value": "Mix Tank"
+                            }
+                          ]
+                        },
+                        "type": "ia.input.dropdown"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Name Label"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 2,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "md",
+                              "order": 1,
+                              "rowIndex": 1,
+                              "span": 2
+                            },
+                            {
+                              "colIndex": 8,
+                              "name": "lg",
+                              "order": 4,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "props": {
+                          "text": "Tank Name",
+                          "textStyle": {
+                            "textAlign": "end"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Name"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1.5,
+                              "rowIndex": 2,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 2,
+                              "name": "md",
+                              "order": 1.5,
+                              "rowIndex": 1,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 10,
+                              "name": "lg",
+                              "order": 5,
+                              "rowIndex": 0,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankName"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "type": "ia.input.text-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "Max Volume Label"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 3,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 6,
+                              "name": "md",
+                              "order": 2,
+                              "rowIndex": 1,
+                              "span": 2
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "lg",
+                              "order": 0,
+                              "rowIndex": 1,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "props": {
+                          "text": "Max Volume",
+                          "textStyle": {
+                            "textAlign": "end"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Max Volume"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1.5,
+                              "rowIndex": 3,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 8,
+                              "name": "md",
+                              "order": 2.5,
+                              "rowIndex": 1,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 2,
+                              "name": "lg",
+                              "order": 1,
+                              "rowIndex": 1,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankMaxVol"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "format": "0,0",
+                          "inputBounds": {
+                            "invalidStyle": {
+                              "backgroundColor": "#FF4747"
+                            },
+                            "minimum": 1
+                          }
+                        },
+                        "type": "ia.input.numeric-entry-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "Volume Label"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 4,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "md",
+                              "order": 0,
+                              "rowIndex": 2,
+                              "span": 2
+                            },
+                            {
+                              "colIndex": 4,
+                              "name": "lg",
+                              "order": 2,
+                              "rowIndex": 1,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "props": {
+                          "text": "Volume",
+                          "textStyle": {
+                            "textAlign": "end"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank Volume"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1.5,
+                              "rowIndex": 4,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 2,
+                              "name": "md",
+                              "order": 1,
+                              "rowIndex": 2,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 6,
+                              "name": "lg",
+                              "order": 3,
+                              "rowIndex": 1,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.inputBounds.maximum": {
+                            "binding": {
+                              "config": {
+                                "path": "../Tank Max Volume.props.value"
+                              },
+                              "transforms": [
+                                {
+                                  "expression": "if(isNull({value}), 0, {value})",
+                                  "type": "expression"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          },
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankVol"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "format": "0,0",
+                          "inputBounds": {
+                            "invalidStyle": {
+                              "backgroundColor": "#FF4747"
+                            },
+                            "minimum": 0
+                          }
+                        },
+                        "type": "ia.input.numeric-entry-field"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tank In Use"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 4,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 5,
+                              "span": 8
+                            },
+                            {
+                              "colIndex": 8,
+                              "name": "md",
+                              "order": 2,
+                              "rowIndex": 2,
+                              "span": 4
+                            },
+                            {
+                              "colIndex": 10,
+                              "name": "lg",
+                              "order": 4,
+                              "rowIndex": 1,
+                              "span": 2
+                            }
+                          ],
+                          "height": 30
+                        },
+                        "propConfig": {
+                          "props.selected": {
+                            "binding": {
+                              "config": {
+                                "path": "view.custom.tankInfo.tankInUse"
+                              },
+                              "transforms": [
+                                {
+                                  "fallback": true,
+                                  "inputType": "scalar",
+                                  "mappings": [
+                                    {
+                                      "input": 0,
+                                      "output": false
+                                    }
+                                  ],
+                                  "outputType": "scalar",
+                                  "type": "map"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "text": "Tank in Use"
+                        },
+                        "type": "ia.input.checkbox"
+                      },
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "script": "\t\n\t\n\t\n\t# This script will add or edit a record for the tank in the database table.\n\t# First we get our field values into a dictionary\n\ttankDetails \u003d {\n\t\t\"tankNo\":     self.parent.parent.getChild(\"Tank Number\").props.value,\n\t\t\"tankName\":   self.parent.parent.getChild(\"Tank Name\").props.text,\n\t\t\"tankType\":   self.parent.parent.getChild(\"Tank Type\").props.value,\n\t\t\"tankVol\":    self.parent.parent.getChild(\"Tank Volume\").props.value,\n\t\t\"tankMaxVol\": self.parent.parent.getChild(\"Tank Max Volume\").props.value,\n\t\t\"tankInUse\":  self.parent.parent.getChild(\"Tank In Use\").props.selected\n\t}\n\t\n\t# Next we run a named query.\n\t# If our custom property \"mode\" is \u0027add\u0027, execute the named query \"Add Tank\".\n\tif self.view.custom.mode \u003d\u003d \"add\":\n\t\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Add Tank\", tankDetails)\n\t# Otherwise, execute the named query \"Edit Tank\".\n\telse:\n\t\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Edit Tank\", tankDetails)\n\t\n\t# Next we need to refresh the table\u0027s data binding\n\tself.parent.parent.parent.parent.getChild(\"Table\").refreshBinding(\u0027props.data\u0027)\n\t\n\t# Hide the Tank Entry Form container\n\tself.parent.parent.parent.parent.getChild(\"Entry Form\").position.display \u003d False\n\t\n\t# That\u0027s it.  Let\u0027s clear our data so the entry form is ready for the next user action.\n\ttankInfo \u003d {\n\t  \"tankInUse\": 0,\n\t  \"tankMaxVol\": None,\n\t  \"tankName\": \"\",\n\t  \"tankNo\": None,\n\t  \"tankVol\": None,\n\t  \"tankType\": \"\"\n\t}\n\t\n\tself.view.custom.tankInfo \u003d tankInfo"
+                                  },
+                                  "scope": "G",
+                                  "type": "script"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Button Add"
+                            },
+                            "position": {
+                              "basis": "150px"
+                            },
+                            "propConfig": {
+                              "props.enabled": {
+                                "binding": {
+                                  "config": {
+                                    "struct": {
+                                      "max": "{.../Tank Max Volume.props.value}",
+                                      "name": "{.../Tank Name.props.text}",
+                                      "num": "{.../Tank Number.props.value}",
+                                      "type": "{.../Tank Type.props.value}",
+                                      "vol": "{.../Tank Volume.props.value}"
+                                    },
+                                    "waitOnAll": true
+                                  },
+                                  "transforms": [
+                                    {
+                                      "code": "\tfor k,v in value.items():\n\t\tif v in (\u0027\u0027, \u0027None\u0027, None):\n\t\t\treturn False\n\treturn True",
+                                      "type": "script"
+                                    }
+                                  ],
+                                  "type": "expr-struct"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "fontSize": "1.2em",
+                                "marginRight": "2.5px"
+                              },
+                              "text": "Save"
+                            },
+                            "type": "ia.input.button"
+                          },
+                          {
+                            "events": {
+                              "dom": {
+                                "onClick": {
+                                  "config": {
+                                    "script": "\t# Hide Tank Entry Form container\n\tself.parent.parent.parent.parent.getChild(\"Entry Form\").position.display \u003d False"
+                                  },
+                                  "scope": "G",
+                                  "type": "script"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Button Cancel"
+                            },
+                            "position": {
+                              "basis": "150px"
+                            },
+                            "props": {
+                              "primary": false,
+                              "style": {
+                                "fontSize": "1.2em",
+                                "marginLeft": "2.5px"
+                              },
+                              "text": "Cancel"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Flex Container"
+                        },
+                        "position": {
+                          "breakpoints": [
+                            {
+                              "colIndex": 0,
+                              "name": "sm",
+                              "order": 1,
+                              "rowIndex": 6,
+                              "span": 12
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "md",
+                              "order": 1,
+                              "rowIndex": 3,
+                              "span": 12
+                            },
+                            {
+                              "colIndex": 0,
+                              "name": "lg",
+                              "order": 1,
+                              "rowIndex": 2,
+                              "span": 12
+                            }
+                          ],
+                          "height": 40
+                        },
+                        "props": {
+                          "justify": "center"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Column Container"
+                    },
+                    "position": {
+                      "grow": 1,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "breakpoints": [
+                        {
+                          "minWidth": 0,
+                          "name": "sm"
+                        },
+                        {
+                          "minWidth": 612,
+                          "name": "md"
+                        },
+                        {
+                          "minWidth": 996,
+                          "name": "lg"
+                        }
+                      ],
+                      "style": {
+                        "marginLeft": "10px",
+                        "marginRight": "10px",
+                        "marginTop": "10px"
+                      }
+                    },
+                    "type": "ia.container.column"
+                  }
+                ],
+                "meta": {
+                  "name": "Entry Form"
+                },
+                "position": {
+                  "display": false,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "borderBottomLeftRadius": 3,
+                    "borderBottomRightRadius": 3,
+                    "borderColor": "#D8D8D8",
+                    "borderStyle": "solid",
+                    "borderTopLeftRadius": 3,
+                    "borderTopRightRadius": 3,
+                    "borderWidth": "1px",
+                    "marginBottom": "20px",
+                    "marginLeft": "20px",
+                    "marginRight": "20px",
+                    "overflow": "visible",
+                    "paddingBottom": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Title"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "components/title-label typography/list-heading"
+                      },
+                      "text": "Delete Confirmation",
+                      "textStyle": {
+                        "fontSize": "1.5em",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "grow": 1
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "expression": "\u0027Are you sure you want to delete \"\u0027 + {..../Table.props.selection.data[0].tankName} + \u0027\" (Tank #\u0027 + {..../Table.props.selection.data[0].tankNo} + \u0027)?\u0027"
+                              },
+                              "type": "expr"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "margin": "10px"
+                          },
+                          "textStyle": {
+                            "textAlign": "center"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Flex Container 1"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "events": {
+                          "component": {
+                            "onActionPerformed": {
+                              "config": {
+                                "script": "\t# This script deletes the tank from the database.\n\t\n\t# First, let\u0027s get the tank number from the selected row\n\t#tankNo \u003d self.parent.parent.parent.getChild(\"Flex Container\").getChild(\"Table\").props.selection.data[0].tankNo\n\ttankNo \u003d self.parent.parent.parent.getChild(\"Table\").props.selection.data[0].tankNo\n\t\n\t# Then we\u0027ll call a Named Query to delete the record\n\tsystem.db.runNamedQuery(\"Ignition 101/Data Entry/Delete Tank\", {\"tankNo\": tankNo})\n\t\n\t# Next we need to refresh the table\u0027s data binding\n\tself.parent.parent.parent.getChild(\"Table\").refreshBinding(\u0027props.data\u0027)\n\t\n\t# Hide Delete Confirmation container\n\tself.parent.parent.parent.getChild(\"Delete Confirmation\").position.display \u003d False\n\t\n\t# Lastly, let\u0027s clear our data so the entry form is ready for the next user action.\n\ttankInfo \u003d {\n\t  \"tankInUse\": 0,\n\t  \"tankMaxVol\": None,\n\t  \"tankName\": \"\",\n\t  \"tankNo\": None,\n\t  \"tankVol\": None,\n\t  \"tankType\": \"\"\n\t}\n\t\n\tself.view.custom.tankInfo \u003d tankInfo"
+                              },
+                              "scope": "G",
+                              "type": "script"
+                            }
+                          }
+                        },
+                        "meta": {
+                          "name": "Button Delete"
+                        },
+                        "position": {
+                          "basis": "150px"
+                        },
+                        "props": {
+                          "style": {
+                            "marginRight": "2.5px"
+                          },
+                          "text": "Delete",
+                          "textStyle": {
+                            "fontSize": "1.2em"
+                          }
+                        },
+                        "type": "ia.input.button"
+                      },
+                      {
+                        "events": {
+                          "dom": {
+                            "onClick": {
+                              "config": {
+                                "script": "\t# Hide Delete Confirmation container\n\tself.parent.parent.parent.getChild(\"Delete Confirmation\").position.display \u003d False"
+                              },
+                              "scope": "G",
+                              "type": "script"
+                            }
+                          }
+                        },
+                        "meta": {
+                          "name": "Button Cancel"
+                        },
+                        "position": {
+                          "basis": "150px"
+                        },
+                        "props": {
+                          "style": {
+                            "marginLeft": "2.5px"
+                          },
+                          "text": "Cancel",
+                          "textStyle": {
+                            "fontSize": "1.2em"
+                          }
+                        },
+                        "type": "ia.input.button"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Flex Container 2"
+                    },
+                    "position": {
+                      "basis": "60px"
+                    },
+                    "props": {
+                      "justify": "center"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "Delete Confirmation"
+                },
+                "position": {
+                  "display": false,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "borderBottomLeftRadius": 3,
+                    "borderBottomRightRadius": 3,
+                    "borderColor": "#D8D8D8",
+                    "borderStyle": "solid",
+                    "borderTopLeftRadius": 3,
+                    "borderTopRightRadius": 3,
+                    "borderWidth": "1px",
+                    "marginBottom": "20px",
+                    "marginLeft": "20px",
+                    "marginRight": "20px",
+                    "overflow": "visible",
+                    "paddingBottom": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Flex Container"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderBottomLeftRadius": 3,
+                "borderBottomRightRadius": 3,
+                "borderColor": "D8D8D8",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 3,
+                "borderTopRightRadius": 3,
+                "borderWidth": "1px",
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Instructions"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "marginBottom": "15px",
+                "overflow": "auto"
+              },
+              "text": "Popup windows and message handlers can also be used for data entry as seen on the Message Handlers feature page."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Link"
+            },
+            "position": {
+              "basis": "24px"
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink"
+              },
+              "target": "self",
+              "text": "Go to \"Message Handlers\"",
+              "url": "/ignition-101/perspective-features/message-handler"
+            },
+            "type": "ia.navigation.link"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Application/Data Entry",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

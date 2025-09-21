@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "media_play.png"
+  ],
+  "attributes": {
+    "width": 16,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "import",
+      "timestamp": "2025-09-02T01:44:05Z"
+    },
+    "size": 212,
+    "lastModificationSignature": "512c0a9582da15bd6e6e746679020f8184705c60ff5dc823e0e7bd929d5224fd",
+    "height": 16
+  }
+}

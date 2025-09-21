@@ -1,0 +1,243 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 913
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "600"
+              },
+              "target": "tab",
+              "text": "Embedded Views",
+              "url": "https://links.inductiveautomation.com/81-embedded-views"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "The Embedded view component allows you to include an entire view inside another. You can select a view to display and pass parameters into the view. Because of this, views can act as templates for information. The embedded view is different than a container because you cannot alter the contents of a view using the Embedded View."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Ramp 4"
+                },
+                "props": {
+                  "params": {
+                    "tagPath": "[Sample_Tags]Ramp/Ramp4"
+                  },
+                  "path": "Ignition 101/Feature Views/Framework/Motor",
+                  "style": {
+                    "borderColor": "#D5D5D5",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "marginTop": "20px"
+                  },
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Ramp 5"
+                },
+                "props": {
+                  "params": {
+                    "tagPath": "[Sample_Tags]Ramp/Ramp5"
+                  },
+                  "path": "Ignition 101/Feature Views/Framework/Pump",
+                  "style": {
+                    "borderColor": "#D5D5D5",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "marginTop": "20px"
+                  },
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Ramp 6"
+                },
+                "props": {
+                  "params": {
+                    "tagPath": "[Sample_Tags]Ramp/Ramp6"
+                  },
+                  "path": "Ignition 101/Feature Views/Framework/Motor",
+                  "style": {
+                    "borderColor": "#D5D5D5",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "marginTop": "20px"
+                  },
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Ramp 7"
+                },
+                "props": {
+                  "params": {
+                    "tagPath": "[Sample_Tags]Ramp/Ramp7"
+                  },
+                  "path": "Ignition 101/Feature Views/Framework/Pump",
+                  "style": {
+                    "borderColor": "#D5D5D5",
+                    "borderStyle": "solid",
+                    "borderWidth": "2px",
+                    "marginTop": "20px"
+                  },
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Ramp Motors"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "justify": "space-around",
+              "style": {
+                "overflow": "visible"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Markdown"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "An embedded view can be included in another embedded view, providing an organized way to build templated screens. The view `Ignition 101/Feature Views/Framework/Pump Station` is embedded below. The view itself includes two embedded view components, both displaying the view `Ignition 101/Feature Views/Framework/Pump`, but with different parameters passed.",
+              "style": {
+                "marginBottom": "10px",
+                "marginTop": "40px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Embedded View"
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Pump Station"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Centering Container"
+            },
+            "position": {
+              "basis": "330px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Perspective Features/Embedded Views",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

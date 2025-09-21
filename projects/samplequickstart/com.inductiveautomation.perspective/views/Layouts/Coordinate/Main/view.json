@@ -1,0 +1,37 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Small"
+        },
+        "props": {
+          "path": "Layouts/Coordinate/Mode Fixed"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Large"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "path": "Layouts/Coordinate/Mode Percent"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 1200
+    },
+    "type": "ia.container.breakpt"
+  }
+}

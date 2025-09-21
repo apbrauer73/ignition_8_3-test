@@ -1,0 +1,1290 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1300,
+      "width": 950
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "top",
+              "text": "Realtime Status and Control",
+              "textStyle": {
+                "fontSize": "20px",
+                "fontWeight": "600"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "With Ignition, you can easily start and stop processes, monitor multiple data points at multiple locations, and check the status of the entire plant floor at any given moment. This example depicts an HVAC zone."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Embedded View"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Air Handling",
+                  "style": {
+                    "borderBottomLeftRadius": "10px",
+                    "borderBottomRightRadius": "10px",
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderTopLeftRadius": "10px",
+                    "borderTopRightRadius": "10px",
+                    "borderWidth": "1px",
+                    "marginTop": "10px"
+                  },
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Air Handling"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignItems": "center",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Tag Binding Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "Tag bindings can be set to bidirectional, allowing components to write values back to tags.",
+              "textStyle": {
+                "paddingTop": "25px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D587",
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "WriteableInteger2"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Motor"
+                    },
+                    "position": {
+                      "basis": "160px"
+                    },
+                    "propConfig": {
+                      "props.style.fill": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger2"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "#0000008C",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": "#F1191980"
+                                },
+                                {
+                                  "input": 1,
+                                  "output": "#4AB61D87"
+                                },
+                                {
+                                  "input": 2,
+                                  "output": "#FAF8128C"
+                                }
+                              ],
+                              "outputType": "color",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "label": {
+                        "text": ""
+                      },
+                      "value": {
+                        "text": ""
+                      }
+                    },
+                    "type": "ia.symbol.motor"
+                  },
+                  {
+                    "meta": {
+                      "name": "Multi State Button"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "propConfig": {
+                      "props.controlValue": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger2"
+                          },
+                          "type": "tag"
+                        }
+                      },
+                      "props.indicatorValue": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger2"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "orientation": "row",
+                      "states": [
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#FFF275",
+                            "classes": ""
+                          },
+                          "text": "Hand",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 2
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#F84553",
+                            "classes": ""
+                          },
+                          "text": "Off",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 0
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#7CEA9C",
+                            "classes": ""
+                          },
+                          "text": "Auto",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "5px"
+                      }
+                    },
+                    "type": "ia.input.multi-state-button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "props": {
+                      "path": "material/arrow_upward"
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "Help Text"
+                    },
+                    "position": {
+                      "basis": "87px"
+                    },
+                    "props": {
+                      "alignVertical": "top",
+                      "style": {
+                        "textAlign": "center"
+                      },
+                      "text": "MultiState Button operates with bidirectional tag binding."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Motor 1"
+                },
+                "position": {
+                  "basis": "220px"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "marginBottom": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D587",
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "WriteableInteger3"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Motor"
+                    },
+                    "position": {
+                      "basis": "160px"
+                    },
+                    "propConfig": {
+                      "props.style.fill": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger3"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "#0000008C",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": "#F1191980"
+                                },
+                                {
+                                  "input": 1,
+                                  "output": "#4AB61D87"
+                                },
+                                {
+                                  "input": 2,
+                                  "output": "#FAF8128C"
+                                }
+                              ],
+                              "outputType": "color",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "label": {
+                        "text": ""
+                      },
+                      "value": {
+                        "text": ""
+                      }
+                    },
+                    "type": "ia.symbol.motor"
+                  },
+                  {
+                    "meta": {
+                      "name": "Multi State Button"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "propConfig": {
+                      "props.controlValue": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger3"
+                          },
+                          "type": "tag"
+                        }
+                      },
+                      "props.indicatorValue": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]Writeable/WriteableInteger3"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "orientation": "row",
+                      "states": [
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#FFF275",
+                            "classes": ""
+                          },
+                          "text": "Hand",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 2
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#F84553",
+                            "classes": ""
+                          },
+                          "text": "Off",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 0
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#7CEA9C",
+                            "classes": ""
+                          },
+                          "text": "Auto",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "5px"
+                      }
+                    },
+                    "type": "ia.input.multi-state-button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "props": {
+                      "path": "material/arrow_upward"
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "Help Text"
+                    },
+                    "position": {
+                      "basis": "87px"
+                    },
+                    "props": {
+                      "alignVertical": "top",
+                      "style": {
+                        "textAlign": "center"
+                      },
+                      "text": "Without \"bidirectional\" toggled on, \"ControlValue\" doesn\u0027t write when user clicks."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Motor 2"
+                },
+                "position": {
+                  "basis": "220px"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "marginBottom": "10px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D587",
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "ReadOnlyInteger1"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Motor"
+                    },
+                    "position": {
+                      "basis": "160px"
+                    },
+                    "propConfig": {
+                      "props.style.fill": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]ReadOnly/ReadOnlyInteger1"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": "#0000008C",
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": "#F1191980"
+                                },
+                                {
+                                  "input": 1,
+                                  "output": "#4AB61D87"
+                                },
+                                {
+                                  "input": 2,
+                                  "output": "#FAF8128C"
+                                }
+                              ],
+                              "outputType": "color",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "label": {
+                        "text": ""
+                      },
+                      "value": {
+                        "text": ""
+                      }
+                    },
+                    "type": "ia.symbol.motor"
+                  },
+                  {
+                    "meta": {
+                      "name": "Multi State Button"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "propConfig": {
+                      "props.controlValue": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]ReadOnly/ReadOnlyInteger1"
+                          },
+                          "type": "tag"
+                        }
+                      },
+                      "props.indicatorValue": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[Sample_Tags]ReadOnly/ReadOnlyInteger1"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "orientation": "row",
+                      "states": [
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#FFF275",
+                            "classes": ""
+                          },
+                          "text": "Hand",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 2
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#F84553",
+                            "classes": ""
+                          },
+                          "text": "Off",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 0
+                        },
+                        {
+                          "selectedStyle": {
+                            "backgroundColor": "#7CEA9C",
+                            "classes": ""
+                          },
+                          "text": "Auto",
+                          "unselectedStyle": {
+                            "classes": ""
+                          },
+                          "value": 1
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "5px"
+                      }
+                    },
+                    "type": "ia.input.multi-state-button"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "props": {
+                      "path": "material/arrow_upward"
+                    },
+                    "type": "ia.display.icon"
+                  },
+                  {
+                    "meta": {
+                      "name": "Help Text"
+                    },
+                    "position": {
+                      "basis": "87px"
+                    },
+                    "props": {
+                      "alignVertical": "top",
+                      "style": {
+                        "textAlign": "center"
+                      },
+                      "text": "Bidirectional bindings still fail for read-only tags."
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Motor 3"
+                },
+                "position": {
+                  "basis": "220px"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "marginBottom": "10px",
+                    "overflow": "visible"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Multi State Flex"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "justify": "space-evenly",
+              "style": {
+                "marginTop": "15px"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Script Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "Components/center-text"
+              },
+              "text": "Scripts can also read and write tag values."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Tag"
+                        },
+                        "position": {
+                          "basis": "50px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "text": "Tag Path:",
+                          "textStyle": {
+                            "marginRight": "10px",
+                            "textAlign": "left"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tag Path"
+                        },
+                        "position": {
+                          "basis": "350px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "text": "[Sample_Tags]Writeable/WriteableInteger5",
+                          "textStyle": {
+                            "paddingLeft": "5px",
+                            "textAlign": "left"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "grow": 1,
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Tag Path"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Tag"
+                        },
+                        "position": {
+                          "basis": "50px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "style": {
+                            "classes": "components/center-text"
+                          },
+                          "text": "Tag Value:",
+                          "textStyle": {
+                            "marginRight": "10px",
+                            "textAlign": "left"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Tag Value"
+                        },
+                        "position": {
+                          "basis": "350px",
+                          "grow": 1
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Writeable/WriteableInteger5"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "textStyle": {
+                            "paddingLeft": "5px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "grow": 1,
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Tag Value"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "marginBottom": "15px",
+                        "marginTop": "15px"
+                      },
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "script": "\ttag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027\n\tcurValue \u003d system.tag.readBlocking([tag])\n\t# NOTE: Returns an array of qualified values\n\t# \tSee https://docs.inductiveautomation.com/display/DOC81/Scripting+Object+Reference#ScriptingObjectReference-QualifiedValue\n\t\t\n\tsystem.tag.writeBlocking([tag], [curValue[0].value + 1])"
+                                  },
+                                  "scope": "G",
+                                  "type": "script"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Add"
+                            },
+                            "position": {
+                              "basis": "150px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "primary": false,
+                              "style": {
+                                "classes": "components/script-button",
+                                "margin": "10px"
+                              },
+                              "text": "Add (+1)"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Flex"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "center",
+                          "justify": "center"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "props": {
+                              "alignVertical": "top",
+                              "style": {
+                                "whiteSpace": "pre"
+                              },
+                              "text": "tag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027\ncurValue \u003d system.tag.readBlocking([tag])\nsystem.tag.writeBlocking([tag], [curValue[0].value + 1])",
+                              "textStyle": {
+                                "fontFamily": "monospace",
+                                "fontSize": "8pt",
+                                "paddingLeft": "5px",
+                                "paddingTop": "2px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Script"
+                        },
+                        "position": {
+                          "basis": "250px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "flex-start",
+                          "style": {
+                            "classes": "layouts/layout-card",
+                            "marginBottom": "5px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "grow": 1,
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Script Add"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignContent": "center",
+                      "alignItems": "center",
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "script": "\ttag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027\n\tcurValue \u003d system.tag.readBlocking([tag])\n\t# NOTE: Returns an array of qualified values\n\t# \tSee https://docs.inductiveautomation.com/display/DOC81/Scripting+Object+Reference#ScriptingObjectReference-QualifiedValue\n\t\t\n\tsystem.tag.writeBlocking([tag], [curValue[0].value - 1])"
+                                  },
+                                  "scope": "G",
+                                  "type": "script"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Subtract"
+                            },
+                            "position": {
+                              "basis": "150px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "primary": false,
+                              "style": {
+                                "classes": "components/script-button",
+                                "margin": "10px"
+                              },
+                              "text": "Subtract (-1)"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Flex"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "center",
+                          "justify": "center"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "props": {
+                              "alignVertical": "top",
+                              "style": {
+                                "whiteSpace": "pre"
+                              },
+                              "text": "tag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027\ncurValue \u003d system.tag.readBlocking([tag])\nsystem.tag.writeBlocking([tag], [curValue[0].value - 1])",
+                              "textStyle": {
+                                "fontFamily": "monospace",
+                                "fontSize": "8pt",
+                                "paddingLeft": "5px",
+                                "paddingTop": "2px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Script"
+                        },
+                        "position": {
+                          "basis": "250px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "flex-start",
+                          "style": {
+                            "classes": "layouts/layout-card",
+                            "marginBottom": "5px"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "grow": 1,
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Script Subtract"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignContent": "center",
+                      "alignItems": "center",
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "script": "\ttag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027\n\tcurValue \u003d system.tag.readBlocking([tag])\n\t# NOTE: Returns an array of qualified values\n\t# \tSee https://docs.inductiveautomation.com/display/DOC81/Scripting+Object+Reference#ScriptingObjectReference-QualifiedValue\n\t\n\tself.parent.parent.parent.getChild(\"Read Copy Label\").getChild(\"Script Value\").props.text \u003d \"Value read via script: \" + str(curValue[0].value)"
+                                  },
+                                  "scope": "G",
+                                  "type": "script"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Copy Button"
+                            },
+                            "position": {
+                              "basis": "150px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "primary": false,
+                              "style": {
+                                "classes": "components/script-button",
+                                "margin": "10px"
+                              },
+                              "text": "Read \u0026 Copy"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Flex"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "center",
+                          "justify": "center"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "props": {
+                              "alignVertical": "top",
+                              "style": {
+                                "whiteSpace": "pre"
+                              },
+                              "text": "tag \u003d \u0027[Sample_Tags]Writeable/WriteableInteger5\u0027 \ncurValue \u003d system.tag.readBlocking([tag])\nself.parent.parent.parent.getChild(\"Read Copy Label\")\n   .getChild(\"Script Value\").props.text \u003d \n   \"Value read via script: \" + str(curValue[0].value)",
+                              "textStyle": {
+                                "fontFamily": "monospace",
+                                "fontSize": "8pt",
+                                "paddingLeft": "5px",
+                                "paddingTop": "2px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Button Script"
+                        },
+                        "position": {
+                          "basis": "250px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "flex-start",
+                          "style": {
+                            "classes": "layouts/layout-card"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "grow": 1,
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Read Copy Script"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignContent": "center",
+                      "alignItems": "center",
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Script Value"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "style": {
+                            "classes": "components/center-text",
+                            "marginBottom": "10px",
+                            "marginTop": "10px"
+                          },
+                          "text": "Value read via script: 14"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "shrink": 0
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Read Copy Label"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "justify": "center",
+                      "wrap": "wrap"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "Flex Container"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Script Flex"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Application/Realtime Control",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

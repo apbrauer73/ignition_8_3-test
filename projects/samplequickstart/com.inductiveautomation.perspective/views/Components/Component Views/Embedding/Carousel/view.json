@@ -1,0 +1,90 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 873
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Carousel",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-carousel"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Carousel component allows you to display a selection of rotating views at a defined rate with a link to the view on a page in your project. The Carousel component can automatically cycle through the views or a user can click through the views on demand, either way, still providing a link to the view on a page."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Carousel"
+        },
+        "position": {
+          "basis": "384px"
+        },
+        "props": {
+          "views": [
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 1
+              },
+              "viewPath": "Components/Component Views/Framework/Embedded View"
+            },
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 2
+              },
+              "viewPath": "Components/Component Views/Framework/Embedded View"
+            },
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {
+                "instance": 3
+              },
+              "viewPath": "Components/Component Views/Framework/Embedded View"
+            }
+          ]
+        },
+        "type": "ia.display.carousel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

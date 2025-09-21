@@ -1,0 +1,305 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 869,
+      "width": 947
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Cylindrical Tank",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-cylindrical-tank"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "marginBottom": "32px"
+          },
+          "text": "A component that looks like a 3D cylindrical tank with some liquid inside. Component can be configured so that the \"liquid\" rises and falls as the \u0027value\u0027 property changes. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Cylindrical Tank"
+                },
+                "position": {
+                  "basis": "240px"
+                },
+                "props": {
+                  "value": 77
+                },
+                "type": "ia.display.cylindrical-tank"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Help Text"
+                },
+                "position": {
+                  "basis": "87px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Cylindrical Tank\u0027s value property has been set to 77."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 1"
+            },
+            "position": {
+              "basis": "250px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "components/component-instance",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Cylindrical Tank"
+                },
+                "position": {
+                  "basis": "240px"
+                },
+                "props": {
+                  "value": 77,
+                  "warningThreshold": 75
+                },
+                "type": "ia.display.cylindrical-tank"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward"
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Help Text"
+                },
+                "position": {
+                  "basis": "250px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "overflow": "visible",
+                    "textAlign": "center"
+                  },
+                  "text": "This Cylindrical Tank\u0027s value property has also been set to 77, and has its warningThreshold property set to 75. Since the value property (77) is above the warningThreshold property (75), the tank is showing a warning overlay. While this example shows the default red overlay for both the liquid and the tank, those colors can be customized with the liquidWarningColor and tankWarningColor properties. "
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 2"
+            },
+            "position": {
+              "basis": "250px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "components/component-instance",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Cylindrical Tank"
+                    },
+                    "position": {
+                      "height": 0.3443,
+                      "width": 0.9476
+                    },
+                    "props": {
+                      "liquidColor": "#07EB47",
+                      "liquidOpacity": 0.9,
+                      "value": 75,
+                      "valueDisplay": {
+                        "enabled": false
+                      }
+                    },
+                    "type": "ia.display.cylindrical-tank"
+                  },
+                  {
+                    "meta": {
+                      "name": "Cylindrical Tank 1"
+                    },
+                    "position": {
+                      "height": 0.3443,
+                      "width": 0.9476
+                    },
+                    "props": {
+                      "liquidOpacity": 1,
+                      "tankColor": "#C0C0C000",
+                      "value": 55,
+                      "valueDisplay": {
+                        "enabled": false
+                      }
+                    },
+                    "type": "ia.display.cylindrical-tank"
+                  },
+                  {
+                    "meta": {
+                      "name": "Help Text"
+                    },
+                    "position": {
+                      "height": 0.5222,
+                      "width": 0.9429,
+                      "x": 0.0045,
+                      "y": 0.4476
+                    },
+                    "props": {
+                      "alignVertical": "top",
+                      "style": {
+                        "textAlign": "center"
+                      },
+                      "text": "Within a coordinate type container, two Cylindrical Tank components can be overalyed on top of each other to display two separate liquid volumes within a single tank. "
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "height": 0.056,
+                      "width": 0.1714,
+                      "x": 0.4005,
+                      "y": 0.3859
+                    },
+                    "props": {
+                      "path": "material/arrow_upward"
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "Component Instance 3"
+                },
+                "position": {
+                  "basis": "250px"
+                },
+                "props": {
+                  "mode": "percent"
+                },
+                "type": "ia.container.coord"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "style": {
+                "classes": "components/component-instance",
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 860,
+      "width": 728
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Signature Pad",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-signature-pad"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "source": "The Signature Pad component enables users to draw and submit a signature. Using the Submit and Clear buttons trigger their respective component events, allowing an action to be performed with the signature image. The action bar and styling can be customized as well."
+        },
+        "type": "ia.display.markdown"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Signature Pad:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Signature Pad"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "props": {
+                  "pad": {
+                    "canvas": {
+                      "style": {
+                        "backgroundColor": "#ffffff"
+                      }
+                    }
+                  }
+                },
+                "type": "ia.input.signature-pad"
+              }
+            ],
+            "meta": {
+              "name": "Signature Pad"
+            },
+            "position": {
+              "basis": "350px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Disabled:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Signature Pad"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "props": {
+                  "enabled": false,
+                  "pad": {
+                    "canvas": {
+                      "style": {
+                        "backgroundColor": "#ffffff"
+                      }
+                    }
+                  }
+                },
+                "type": "ia.input.signature-pad"
+              }
+            ],
+            "meta": {
+              "name": "Disabled"
+            },
+            "position": {
+              "basis": "350px",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "Customized:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Signature Pad"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.actionBar.style.backgroundColor": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.pad.canvas.clearColor"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "actionBar": {
+                    "clearButton": {
+                      "text": "RESET"
+                    },
+                    "position": "right",
+                    "submitButton": {
+                      "primary": false,
+                      "text": "OK"
+                    }
+                  },
+                  "pad": {
+                    "canvas": {
+                      "clearColor": "#0A0A21"
+                    },
+                    "pen": {
+                      "color": "#FF9527",
+                      "width": 2
+                    }
+                  }
+                },
+                "type": "ia.input.signature-pad"
+              }
+            ],
+            "meta": {
+              "name": "Customized"
+            },
+            "position": {
+              "basis": "350px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "direction": "column",
+              "style": {
+                "overflow": "visible"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Examples"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "justify": "space-evenly",
+          "style": {
+            "overflow": "visible",
+            "padding": "10px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

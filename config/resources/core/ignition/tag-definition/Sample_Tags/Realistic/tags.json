@@ -1,0 +1,112 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic4",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic4",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic7",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic7",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic2",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic2",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic9",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic9",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic8",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic8",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic3",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic3",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic6",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic6",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic1",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic1",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic0",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic0",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Realistic/Realistic5",
+    "dataType": "Float8",
+    "historyProvider": "Sample_SQLite_Database",
+    "historicalDeadband": 0.1,
+    "name": "Realistic5",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

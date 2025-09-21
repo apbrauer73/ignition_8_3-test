@@ -1,0 +1,67 @@
+{
+  "custom": {},
+  "params": {
+    "featureView": "charts",
+    "folder": "pie"
+  },
+  "propConfig": {
+    "params.featureView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.folder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1087
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Main View"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "featureView": "{view.params.featureView}",
+                  "folder": "{view.params.folder}"
+                },
+                "waitOnAll": true
+              },
+              "enabled": false,
+              "transforms": [
+                {
+                  "code": "\tfeatureView \u003d value[\u0027featureView\u0027].replace(\"-\", \" \").title()\n\tfolder \u003d value[\u0027folder\u0027].replace(\"-\", \" \").title()\n\t\n\treturn \"Ignition 101/Feature Views/\" + folder + \"/\" + featureView",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "path": "Ignition 101/Feature Views/Perspective Features/Navigation"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

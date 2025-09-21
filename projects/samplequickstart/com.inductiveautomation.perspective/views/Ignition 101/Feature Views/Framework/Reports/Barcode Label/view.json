@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "Helpful links: "
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Text Shape"
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "18px",
+                "fontWeight": "500",
+                "marginLeft": "5px",
+                "marginRight": "5px",
+                "textAlign": "left"
+              },
+              "target": "tab",
+              "text": "Text Shape,",
+              "url": "https://links.inductiveautomation.com/81-report-text-shape"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Line Shape"
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "18px",
+                "fontWeight": "500",
+                "marginLeft": "5px",
+                "marginRight": "5px",
+                "textAlign": "left"
+              },
+              "target": "tab",
+              "text": "Line Shape,",
+              "url": "https://links.inductiveautomation.com/81-report-line-shape"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Barcode"
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "18px",
+                "fontWeight": "500",
+                "marginRight": "5px",
+                "textAlign": "left"
+              },
+              "target": "tab",
+              "text": "Barcode",
+              "url": "https://links.inductiveautomation.com/81-report-barcode"
+            },
+            "type": "ia.navigation.link"
+          }
+        ],
+        "meta": {
+          "name": "Links"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "margin": "10px",
+            "overflow": "visible"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Report Viewer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "page": 1,
+          "pageCount": 1,
+          "source": "Barcode Report"
+        },
+        "type": "ia.reporting.report-viewer"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1003
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Tag Browse Tree",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-tag-browse-tree"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "marginBottom": "30px"
+          },
+          "text": "The Tag Browse Tree component displays a tree hierarchy based on an array of objects. Icons can be chosen for the nodes of the tree, and different icons can be used when an node is expanded or collapsed."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../Tag Browse Tree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"Selected Value: \" + \r\nif(len({value}) \u003e 0 \u0026\u0026 indexOf({value}[0], \"/\") \u003e -1,\r\n\ttag({value}[0]),\r\n\t\u0027\u0027)",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginBottom": "5px",
+                    "textAlign": "left"
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Tag Browse Tree"
+                },
+                "position": {
+                  "basis": "400px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "selection": {
+                    "mode": "single"
+                  }
+                },
+                "scripts": {
+                  "customMethods": [],
+                  "extensionFunctions": [
+                    {
+                      "enabled": false,
+                      "name": "filterBrowseNode",
+                      "script": "\treturn True"
+                    }
+                  ],
+                  "messageHandlers": []
+                },
+                "type": "ia.display.tag-browse-tree"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward",
+                  "style": {
+                    "marginTop": "32px"
+                  }
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Help Text"
+                },
+                "position": {
+                  "basis": "110px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Tag Browse Tree component has no filtering or extension functions."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 1"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../Tag Browse Tree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"Selected Value: \" + \r\nif(len({value}) \u003e 0 \u0026\u0026 indexOf({value}[0], \"/\") \u003e -1,\r\n\ttag({value}[0]),\r\n\t\u0027\u0027)",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginBottom": "5px",
+                    "textAlign": "left"
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Tag Browse Tree"
+                },
+                "position": {
+                  "basis": "400px",
+                  "grow": 1
+                },
+                "props": {
+                  "root": {
+                    "path": "[Sample_Tags]/Ramp"
+                  },
+                  "selection": {
+                    "mode": "single"
+                  }
+                },
+                "scripts": {
+                  "customMethods": [],
+                  "extensionFunctions": [
+                    {
+                      "enabled": false,
+                      "name": "filterBrowseNode",
+                      "script": "\treturn True"
+                    }
+                  ],
+                  "messageHandlers": []
+                },
+                "type": "ia.display.tag-browse-tree"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward",
+                  "style": {
+                    "marginTop": "32px"
+                  }
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Help Text"
+                },
+                "position": {
+                  "basis": "110px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Tag Browse Tree component is configured to display tags with the root path [Sample_Tags]/Ramp."
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 2"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginLeft": "20px",
+                "marginRight": "20px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../Tag Browse Tree.props.selection.values"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"Selected Value: \" + \r\nif(len({value}) \u003e 0 \u0026\u0026 indexOf({value}[0], \"/\") \u003e -1,\r\n\ttag({value}[0]),\r\n\t\u0027\u0027)",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginBottom": "5px",
+                    "textAlign": "left"
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Tag Browse Tree"
+                },
+                "position": {
+                  "basis": "400px",
+                  "grow": 1
+                },
+                "props": {
+                  "selection": {
+                    "mode": "single"
+                  }
+                },
+                "scripts": {
+                  "customMethods": [],
+                  "extensionFunctions": [
+                    {
+                      "enabled": true,
+                      "name": "filterBrowseNode",
+                      "script": "\tif str(node.objectType) in (\u0027AtomicTag\u0027, \u0027Folder\u0027):\n\t\treturn True\n\telif str(node.objectType) \u003d\u003d \u0027Property\u0027 and str(node.name) \u003d\u003d \u0027value\u0027:\n\t\treturn True\n\telse:\n\t\treturn False"
+                    }
+                  ],
+                  "messageHandlers": []
+                },
+                "type": "ia.display.tag-browse-tree"
+              },
+              {
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "path": "material/arrow_upward",
+                  "style": {
+                    "marginTop": "32px"
+                  }
+                },
+                "type": "ia.display.icon"
+              },
+              {
+                "meta": {
+                  "name": "Help Text"
+                },
+                "position": {
+                  "basis": "110px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "textAlign": "center"
+                  },
+                  "text": "This Tag Browse Tree component\u0027s \"filterBrowseNode\" extension function is configured to display folders, root tags, and only the value property. "
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 3"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly",
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

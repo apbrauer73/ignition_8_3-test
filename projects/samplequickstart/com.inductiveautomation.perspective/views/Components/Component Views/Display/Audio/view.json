@@ -1,0 +1,186 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Audio",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-audio"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Help Text"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "marginBottom": "20px"
+          },
+          "text": "An Audio component, hidden by default, that designers can use to play and pause sound clips in the browser. In the event a user is displaying the UI (props.display \u003d true), the component will be displayed differently based on the browser in use. The player includes play / pause, mute, playback speed, and optional download functionality. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Audio"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.volume": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "../../Volume/Slider.props.value"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "display": true,
+                  "source": "https://archive.org/download/The_Four_Seasons_Vivaldi-10361/John_Harrison_with_the_Wichita_State_University_Chamber_Players_-_01_-_Spring_Mvt_1_Allegro.mp3",
+                  "style": {
+                    "marginTop": "80px"
+                  }
+                },
+                "type": "ia.display.audio"
+              }
+            ],
+            "meta": {
+              "name": "Flex Container"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Slider"
+                },
+                "position": {
+                  "basis": "192px",
+                  "grow": 1
+                },
+                "props": {
+                  "orientation": "vertical",
+                  "style": {
+                    "marginBottom": "15px",
+                    "marginTop": "15px"
+                  },
+                  "value": 50
+                },
+                "type": "ia.input.slider"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../Slider.props.value"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"Vol: \" + {value}",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Volume"
+            },
+            "position": {
+              "basis": "100px",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "250px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "marginBottom": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Footer Text"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "Please enjoy The Four Seasons by Vivaldi",
+          "textStyle": {
+            "fontStyle": "italic"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

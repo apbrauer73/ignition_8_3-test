@@ -1,0 +1,1076 @@
+{
+  "custom": {},
+  "params": {
+    "station": "KSMF"
+  },
+  "propConfig": {
+    "params.curentData": {
+      "paramDirection": "input"
+    },
+    "params.currentData": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.station": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 195,
+      "width": 343
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelDate"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({/root.custom.currentData.success},\r\n  concat(toStr(dateFormat(addHours(addHours(now(60000), toInt({/root.custom.currentData.timezone})), toInt(-{/root.custom.currentData.serverTimezone})), \u0027EEEE, hh:mm a\u0027))),\r\n  \"Waiting for weather station...\")"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value is None:\n\t\treturn \"Waiting for weather station...\"\n\treturn value",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "paddingBottom": "10px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelLocation"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({/root.custom..currentData.success},\r\n  toStr({/root.custom..currentData.location}),\r\n  \"Waiting for weather station...\")"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value is None:\n\t\treturn \"Waiting for weather station...\"\n\treturn value",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column",
+          "style": {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+            "overflow": "visible",
+            "padding": "5px 0px 0px 10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "hasDelegate": true,
+                  "name": "Label"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.temp}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif not value:\n\t\treturn \"\"\n\treturn str(value) + u\"°\"",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "40px",
+                    "paddingBottom": "10px",
+                    "textShadow": "1px 1px 2px #000000"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.humidity}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif not value:\n\t\treturn \"\" \n\treturn \"Humidity:   \" + str(value)",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "paddingBottom": "5px",
+                    "paddingLeft": "5px",
+                    "paddingRight": "5px",
+                    "paddingTop": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "TempHum"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "center",
+              "alignItems": "center",
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Sunny"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027sun\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "cx": 150,
+                      "cy": 150,
+                      "fill": {
+                        "paint": "#F7E07E"
+                      },
+                      "name": "circle",
+                      "r": 77.91,
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": 10,
+                        "paint": "var(--neutral-100)",
+                        "width": 12
+                      },
+                      "type": "circle"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": 10,
+                            "paint": "var(--neutral-100)",
+                            "width": 12
+                          },
+                          "type": "line",
+                          "x1": 51.79,
+                          "x2": 10.83,
+                          "y1": 150,
+                          "y2": 150
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": 10,
+                            "paint": "var(--neutral-100)",
+                            "width": 12
+                          },
+                          "type": "line",
+                          "x1": 289.17,
+                          "x2": 248.21,
+                          "y1": 150,
+                          "y2": 150
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": 12
+                          },
+                          "type": "line",
+                          "x1": "78.43",
+                          "x2": "49.46",
+                          "y1": "80.55",
+                          "y2": "51.59"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "246.28",
+                          "x2": "217.32",
+                          "y1": "248.41",
+                          "y2": "219.45"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "78.43",
+                          "x2": "49.46",
+                          "y1": "219.45",
+                          "y2": "248.41"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "246.28",
+                          "x2": "217.32",
+                          "y1": "51.59",
+                          "y2": "80.55"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": 150,
+                          "x2": 150,
+                          "y1": 248.21,
+                          "y2": 289.17
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": 10,
+                            "paint": "var(--neutral-100)",
+                            "width": 12
+                          },
+                          "type": "line",
+                          "x1": 150,
+                          "x2": 150,
+                          "y1": 10.83,
+                          "y2": 51.79
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              },
+              {
+                "meta": {
+                  "name": "Partly Cloudy"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027partly cloudy\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "d": "M88.6,168.13c-7-6.52-12.52-14.83-15.78-24.53c-10.41-31.06,6.33-64.69,37.39-75.1s64.69,6.33,75.1,37.39  c4.54,13.54,3.92,27.57-0.8,39.95",
+                      "fill": {
+                        "paint": "#F7E07E"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": 12
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "line",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "line",
+                      "x1": "93.34",
+                      "x2": "101.83",
+                      "y1": "25.56",
+                      "y2": "50.88"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "line",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "line",
+                      "x1": "227.04",
+                      "x2": "201.72",
+                      "y1": "90.26",
+                      "y2": "98.75"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "line",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "line",
+                      "x1": "55.43",
+                      "x2": "30.11",
+                      "y1": "147.8",
+                      "y2": "156.29"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "line",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "line",
+                      "x1": "59.77",
+                      "x2": "35.86",
+                      "y1": "89.66",
+                      "y2": "77.76"
+                    },
+                    {
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "line",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "line",
+                      "x1": "162.95",
+                      "x2": "174.86",
+                      "y1": "54.22",
+                      "y2": "30.31"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "d": "M239.07,182.3c0.07-0.87,0.13-1.75,0.13-2.64c0-18.82-15.26-34.08-34.08-34.08c-7.6,0-14.6,2.52-20.27,6.73   c-9.98-13.74-26.14-22.72-44.42-22.72c-29.31,0-53.19,22.98-54.77,51.89c-23.79,4.3-41.85,25.07-41.85,50.1   c0,28.15,22.82,50.96,50.96,50.96h131.55c28.15,0,50.96-22.82,50.96-50.96C277.29,207.86,261.04,187.97,239.07,182.3z",
+                          "fill": {
+                            "paint": "var(--neutral-30)"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              },
+              {
+                "meta": {
+                  "name": "Cloudy Icon"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027cloudy\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "d": "M205.23,143.17c0.07-0.87,0.13-1.75,0.13-2.64c0-18.82-15.26-34.08-34.08-34.08c-7.6,0-14.6,2.52-20.27,6.73   c-9.98-13.74-26.14-22.72-44.42-22.72c-29.31,0-53.19,22.98-54.77,51.89c-23.79,4.3-41.85,25.07-41.85,50.1   c0,28.15,22.82,50.96,50.96,50.96h131.55c28.15,0,50.96-22.82,50.96-50.96C243.45,168.72,227.2,148.83,205.23,143.17z",
+                          "fill": {
+                            "paint": "var(--neutral-30)"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "path"
+                        },
+                        {
+                          "d": "M261.15,96.39c0.05-0.66,0.1-1.32,0.1-1.99c0-14.22-11.52-25.74-25.74-25.74c-5.74,0-11.03,1.9-15.31,5.08   c-7.54-10.38-19.74-17.16-33.56-17.16c-22.14,0-40.18,17.36-41.37,39.2c-3.42,0.62-6.67,1.69-9.71,3.14   c5.94,3.75,11.12,8.59,15.24,14.27c5.67-4.21,12.66-6.73,20.27-6.73c18.82,0,34.08,15.26,34.08,34.08c0,0.89-0.07,1.76-0.13,2.64   c15.27,3.94,27.76,14.75,33.97,28.95h12.54c21.26,0,38.5-17.24,38.5-38.5C290.02,115.69,277.74,100.67,261.15,96.39z",
+                          "fill": {
+                            "paint": "var(--neutral-60)"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              },
+              {
+                "meta": {
+                  "name": "Rain Shower Icon"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027rain\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "d": "M200.23,106.36c0.07-0.87,0.13-1.75,0.13-2.64c0-18.82-15.26-34.08-34.08-34.08c-7.6,0-14.6,2.52-20.27,6.73  c-9.98-13.74-26.14-22.72-44.42-22.72c-29.31,0-53.19,22.98-54.77,51.89c-23.79,4.3-41.85,25.07-41.85,50.1  c0,28.15,22.82,50.96,50.96,50.96h131.55c28.15,0,50.96-22.82,50.96-50.96C238.45,131.92,222.2,112.03,200.23,106.36z",
+                      "fill": {
+                        "paint": "var(--neutral-30)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M256.15,59.58c0.05-0.66,0.1-1.32,0.1-1.99c0-14.22-11.52-25.74-25.74-25.74c-5.74,0-11.03,1.9-15.31,5.08  c-7.54-10.38-19.74-17.16-33.56-17.16c-22.14,0-40.18,17.36-41.37,39.2c-3.42,0.62-6.67,1.69-9.71,3.14  c5.94,3.75,11.12,8.59,15.24,14.27c5.67-4.21,12.66-6.73,20.27-6.73c18.82,0,34.08,15.26,34.08,34.08c0,0.89-0.07,1.76-0.13,2.64  c15.27,3.94,27.76,14.75,33.97,28.95h12.54c21.26,0,38.5-17.24,38.5-38.5C285.02,78.89,272.74,63.86,256.15,59.58z",
+                      "fill": {
+                        "paint": "var(--neutral-60)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "52.1",
+                          "x2": "43.42",
+                          "y1": "221.19",
+                          "y2": "250.11"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "200.01",
+                          "x2": "191.33",
+                          "y1": "221.19",
+                          "y2": "250.11"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "103.97",
+                          "x2": "86.62",
+                          "y1": "221.19",
+                          "y2": "279.04"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "152.78",
+                          "x2": "135.43",
+                          "y1": "221.19",
+                          "y2": "279.04"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              },
+              {
+                "meta": {
+                  "name": "Rain-Weather-Icon"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027light rain\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "d": "M187.12,200.1h38.74c32.46,0,58.77-26.31,58.77-58.77c0-27.38-18.75-50.32-44.08-56.85  c0.08-1.01,0.15-2.01,0.15-3.04c0-21.7-17.6-39.3-39.3-39.3c-8.77,0-16.83,2.91-23.37,7.76c-11.51-15.85-30.14-26.2-51.23-26.2  c-33.8,0-61.34,26.5-63.16,59.85c-27.44,4.96-48.26,28.92-48.26,57.78c0,32.46,26.31,58.77,58.77,58.77h35.19",
+                      "fill": {
+                        "paint": "var(--neutral-30)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M194.15,224.51c-5.85-29.65-27.97-73.7-38.5-93.59c-2.48-4.68-9.15-4.84-11.84-0.28  c-23.14,39.22-32.84,72-36.79,90.08c-1.66,4.73-2.58,9.82-2.58,15.12c0,25.17,20.4,45.57,45.57,45.57  c25.17,0,45.57-20.4,45.57-45.57C195.57,231.92,195.07,228.13,194.15,224.51z",
+                      "fill": {
+                        "paint": "var(--info)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "var(--neutral-100)",
+                        "width": "12"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M127.31,229c0,0-2.36,25.06,22.69,29.97",
+                      "fill": {
+                        "paint": "none"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "linecap": "round",
+                        "miterlimit": "10",
+                        "paint": "#FFFFFF",
+                        "width": "12"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              },
+              {
+                "meta": {
+                  "name": "Storm Icon"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "{/root.custom.currentData.success} \u0026\u0026 {parent.custom.weatherImage} \u003d \u0027storm\u0027"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.elements[0].elements[2].elements[0].stroke.paint": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.theme"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#F7E07E",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "light-cool",
+                              "output": "var(--neutral-100)"
+                            },
+                            {
+                              "input": "light",
+                              "output": "var(--neutral-100)"
+                            },
+                            {
+                              "input": "light-warm",
+                              "output": "var(--neutral-100)"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "d": "M134.15,214.04h55.55c27.38,0,49.58-22.2,49.58-49.58c0-23.1-15.81-42.45-37.19-47.96   c0.07-0.85,0.13-1.7,0.13-2.57c0-18.31-14.84-33.15-33.15-33.15c-7.4,0-14.2,2.45-19.72,6.54c-9.71-13.37-25.43-22.1-43.22-22.1   c-28.51,0-51.74,22.36-53.28,50.49c-23.15,4.19-40.72,24.39-40.72,48.75c0,27.38,22.2,49.58,49.58,49.58h25.55",
+                          "fill": {
+                            "paint": "var(--neutral-30)"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "path"
+                        },
+                        {
+                          "fill": {
+                            "paint": "#CCCCCC"
+                          },
+                          "name": "line",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "line",
+                          "x1": "87.27",
+                          "x2": "113.87",
+                          "y1": "214.04",
+                          "y2": "214.04"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "fill": {
+                                "paint": "#F7E07E"
+                              },
+                              "name": "polygon",
+                              "points": "128.67,129.08 103.14,196.61 125.6,192.96 105.7,269.07 165.99,172.56 136.89,177.29 161.37,128.97       ",
+                              "stroke": {
+                                "linecap": "round",
+                                "miterlimit": "10",
+                                "width": 6
+                              },
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "group",
+                          "type": "group"
+                        },
+                        {
+                          "d": "M259.13,70.55c0.05-0.66,0.1-1.31,0.1-1.98c0-14.15-11.47-25.62-25.62-25.62c-5.71,0-10.97,1.89-15.23,5.06   c-7.5-10.33-19.65-17.08-33.39-17.08c-22.03,0-39.98,17.27-41.17,39.01c-3.4,0.61-6.64,1.68-9.66,3.13   c5.91,3.73,11.07,8.55,15.17,14.2c5.64-4.19,12.6-6.69,20.17-6.69c18.73,0,33.91,15.18,33.91,33.91c0,0.89-0.07,1.76-0.13,2.62   c15.2,3.92,27.63,14.68,33.81,28.81h12.48c21.16,0,38.31-17.15,38.31-38.31C287.86,89.76,275.64,74.81,259.13,70.55z",
+                          "fill": {
+                            "paint": "var(--neutral-60)"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "linecap": "round",
+                            "miterlimit": "10",
+                            "paint": "var(--neutral-100)",
+                            "width": "12"
+                          },
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "viewBox": "0 0 300 300"
+                },
+                "type": "ia.shapes.svg"
+              }
+            ],
+            "meta": {
+              "name": "Icons"
+            },
+            "position": {
+              "basis": "75px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "custom.weatherImage": {
+                "binding": {
+                  "config": {
+                    "expression": "if( {/root.custom..currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/skc.png\u0027 ||\r\n \t{/root.custom..currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nskc.png\u0027, \t\r\n\t\t\u0027sun\u0027, \t\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/sct.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsct.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/few.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nfew.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/bkn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nbkn.png\u0027,\r\n\t\u0027partly cloudy\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ovc.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/novc.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fg.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nfg.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/wind.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nwind.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/haze.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/dust.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/smoke.png\u0027,\r\n\t\u0027cloudy\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_shwrs.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_nshwrs.png\u0027,\r\n\t\u0027light rain\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/shra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ra1.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nra.png\u0027,\r\n\t\u0027rain\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_tsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/hi_ntsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsvrtsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/tsra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ntsra.png\u0027,\r\n\t\u0027storm\u0027,\r\n\tif( {/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/sn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nsn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fzra.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/raip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/rasn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nrasn.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/fzrara.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/ip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nip.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/mix.png\u0027 ||\r\n\t{/root.custom.currentData.icon} \u003d \u0027http://forecast.weather.gov/images/wtf/small/nmix.png\u0027,\r\n\t\u0027snow\u0027,\r\n\t\u0027sun\u0027\r\n\t) \t\t\t\t\t) \t\t\t\t) \t\t\t) \t\t)\t\t \t)\t\t )"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "justify": "center",
+              "style": {
+                "marginLeft": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LabelCondition"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({/root.custom.currentData.success}, \nconcat(\"Condition:   \" ,\n{/root.custom.currentData.condition}),\n\"\")"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif value is None:\n\t\treturn \"\"\n\treturn value",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "alignVertical": "bottom",
+                  "style": {
+                    "fontSize": "12px",
+                    "paddingBottom": "2px",
+                    "paddingLeft": "5%",
+                    "paddingTop": "auto"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "LabelWind"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({/root.custom.currentData.success}, \nconcat(\"Wind:   \", \n{/root.custom.currentData.wind}),\n\"\")"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif value is None:\n\t\treturn \"\"\n\treturn value",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "12px",
+                    "paddingBottom": "auto",
+                    "paddingLeft": "5%",
+                    "paddingTop": "auto"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Condition_Wind"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "center",
+          "justify": "center",
+          "style": {
+            "marginTop": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "custom.currentData": {
+        "binding": {
+          "config": {
+            "struct": {
+              "station": "{view.params.station}",
+              "timer": "now(300000)"
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "\treturn self.getWeather(value[\"station\"])",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "color": "var(--neutral-100)",
+        "padding": "10px"
+      }
+    },
+    "scripts": {
+      "customMethods": [
+        {
+          "name": "getWeather",
+          "params": [
+            "station"
+          ],
+          "script": "\timport system\n\timport xml.etree.ElementTree as ET\n\t\n\tcurrentData \u003d {}\n\t\n\t# retrieve weather station data\n\turl \u003d \"https://w1.weather.gov/xml/current_obs/%s.xml\" %station\n\ttry:\n\t\tresponse \u003d system.net.httpGet(url)\n\t\n\t\t# build ETree from XML response\n\t\troot \u003d ET.fromstring(response)\n\texcept:\n\t\tcurrentData[\u0027success\u0027] \u003d False\n\t\tcurrentData[\u0027location\u0027] \u003d \"\"\n\t\tcurrentData[\u0027temp\u0027] \u003d \"\"\n\t\tcurrentData[\u0027humidity\u0027] \u003d \"\"\n\t\tcurrentData[\u0027wind\u0027] \u003d \"\"\n\t\tcurrentData[\u0027date\u0027] \u003d \"\"\n\t\tcurrentData[\u0027icon\u0027] \u003d \"\"\n\t\tcurrentData[\u0027condition\u0027] \u003d \"\"\n\t\tcurrentData[\u0027timezone\u0027] \u003d \"-0700\"\n\t\tcurrentData[\u0027serverTimezone\u0027] \u003d int(system.date.getTimezoneOffset())\n\t\treturn currentData\n\t\n\tcurrentData[\u0027location\u0027] \u003d root.find(\"location\").text if root.find(\"location\") is not None else \"\"\n\t\n\tcurrentData[\u0027temp\u0027] \u003d float(root.find(\"temp_f\").text) if root.find(\"temp_f\") is not None else 67.8\n\t\n\tcurrentData[\u0027humidity\u0027] \u003d float(root.find(\"relative_humidity\").text) if root.find(\"relative_humidity\") is not None else 0.0\n\t\n\twind_dir \u003d root.find(\"wind_dir\").text if root.find(\"wind_dir\") is not None else \"\"\n\twind_mph \u003d root.find(\"wind_mph\").text if root.find(\"wind_mph\") is not None else \"\"\n\tif wind_dir and wind_mph:\n\t\tcurrentData[\u0027wind\u0027] \u003d wind_mph + \" mph \" + wind_dir\n\telse:\n\t\tcurrentData[\u0027wind\u0027] \u003d \"\"\n\t\n\turl_base \u003d root.find(\"icon_url_base\").text if root.find(\"icon_url_base\") is not None else \"\"\n\turl_name \u003d root.find(\"icon_url_name\").text if root.find(\"icon_url_name\") is not None else \"\"\n\tcurrentData[\u0027icon\u0027] \u003d url_base + url_name\n\t\n\tcurrentData[\u0027condition\u0027] \u003d root.find(\"weather\").text if root.find(\"weather\") is not None else \"Sunny\"\n\t\n\tcurrentData[\u0027date\u0027] \u003d root.find(\"observation_time_rfc822\").text if root.find(\"observation_time_rfc822\") is not None else str(system.date.now())\n\t# timezone is at the end of the datetime string, -#### format\n\tcurrentData[\u0027timezone\u0027] \u003d int(currentData[\u0027date\u0027][-5:-2])\n\tcurrentData[\u0027serverTimezone\u0027] \u003d int(system.date.getTimezoneOffset())\n\tcurrentData[\u0027success\u0027] \u003d True\n\t\t\n\treturn currentData"
+        }
+      ],
+      "extensionFunctions": null,
+      "messageHandlers": []
+    },
+    "type": "ia.container.flex"
+  }
+}

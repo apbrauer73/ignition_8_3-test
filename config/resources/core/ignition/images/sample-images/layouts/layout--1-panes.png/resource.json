@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "layout--1-panes.png"
+  ],
+  "attributes": {
+    "size": 17925,
+    "lastModificationSignature": "6b8e3b93ccb678d27460f61bcc71078581e25e14a55792ae4da035bc17e51393",
+    "width": -1,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "quickstart",
+      "timestamp": "2025-09-02T01:44:23Z"
+    },
+    "height": -1
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 597
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "Reports",
+              "url": "https://links.inductiveautomation.com/81-docs-reporting"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "marginBottom": "15px"
+              },
+              "text": "With powerful, easy-to-use tools for building dynamic, database-driven PDF reports with pixel-perfect layout, Ignition is perfect for creating virtually any kind of industrial report, including: SCADA reporting, industrial project reports, production management reports, OEE and downtime tracking, SPC reports, QA reports, compliance reports, historical data analysis reports, and more."
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Simple Report"
+                },
+                "position": {
+                  "tabIndex": 1
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Reports/Simple Report"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Tag History Report"
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Reports/Tag History Report"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Barcode Label"
+                },
+                "position": {
+                  "tabIndex": 2
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Reports/Barcode Label"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Audit Report"
+                },
+                "position": {
+                  "tabIndex": 3
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Reports/Audit Report"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Tab Container"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "contentStyle": {
+                "paddingLeft": "20px"
+              },
+              "tabSize": {
+                "width": 150
+              },
+              "tabs": [
+                "Tag History",
+                "Simple",
+                "Barcode",
+                "Audit"
+              ]
+            },
+            "type": "ia.container.tab"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "500px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Application/Reports",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

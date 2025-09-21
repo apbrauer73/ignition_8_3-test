@@ -1,0 +1,109 @@
+{
+  "custom": {},
+  "params": {
+    "componentView": "Chart Range Selector",
+    "folder": "charts"
+  },
+  "propConfig": {
+    "params.componentView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.folder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1187,
+      "width": 1400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Selected Component"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "componentView": "{view.params.componentView}",
+                  "folder": "{view.params.folder}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\t# Replace dashes with spaces and capitalize the first letter\n\tcomponentView \u003d value[\u0027componentView\u0027].replace(\"-\", \" \").title()\n\tfolder \u003d value[\u0027folder\u0027].replace(\"-\", \" \").title()\n\t\n\treturn \"Components/Component Views/\" + folder + \"/\" + componentView ",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginLeft": "22px",
+            "marginRight": "22px",
+            "padding": "10px"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "../Selected Component.props.path"
+              },
+              "transforms": [
+                {
+                  "expression": "\u0027Designer View Path: \u0027 + {value}",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

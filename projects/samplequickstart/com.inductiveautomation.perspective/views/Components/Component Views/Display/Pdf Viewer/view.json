@@ -1,0 +1,89 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "PDF Viewer",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-pdf-viewer"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "marginBottom": "32px"
+          },
+          "text": "The PDF Viewer component displays a PDF that\u0027s hosted on a web server by providing a URL to the source property. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "PDF Viewer"
+                },
+                "position": {
+                  "basis": "630px"
+                },
+                "props": {
+                  "page": 1,
+                  "pageCount": 2
+                },
+                "type": "ia.display.pdf-viewer"
+              }
+            ],
+            "meta": {
+              "name": "Component Instance 1"
+            },
+            "position": {
+              "basis": "687px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

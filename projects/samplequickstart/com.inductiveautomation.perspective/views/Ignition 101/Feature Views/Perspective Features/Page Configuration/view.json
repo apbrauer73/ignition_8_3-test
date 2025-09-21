@@ -1,0 +1,200 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1920,
+      "width": 1332
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Navigation Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "Navigation",
+              "url": "https://links.inductiveautomation.com/81-docs-perspective-pages"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Navigation Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "markdown": {
+                "escapeHtml": false
+              },
+              "source": "Perspective is designed to operate in a web browsing environment. A Page is the main navigational element in a Perspective Session, so when a Perspective Session starts, it typically begins at the page mounted to the Page URL \"/\". However, users can directly navigate to any page in a project if they know the URL. \n\u003cbr\u003e\n\u003cbr\u003e\nWhen talking about pages, there are two distinct objects to be aware of:\n- **Page:** A collection of views that are displayed within a single tab of a browser during runtime. A page consists of at least one view (called a \"primary view\"), any number of additional views that can be docked along the edges (called \"docked views\"), and a partial URL associated with the page.\n- **Page Configuration:** A collection of settings that dictate how the page will behave during runtime, including which views are present on a page, as well as rules for docked views in the page.\n\nThus, Page Configurations are used to define pages that can be opened in the session, while Pages are running instances that are defined by the Page Configuration. ",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Page Config Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "Page Configuration",
+              "url": "https://links.inductiveautomation.com/81-docs-perspective-pages-config"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Page Config Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "All page configuration happens in the Designer on the Perspective Page Settings tab. Any number of pages can be created for a project, each with their own Primary View and Docked Views. \n- **Configuration Entry:** Each entry must include a Page URL as well as a Primary View. The Page URL defined here is appended to the end of the gateway\u0027s perspective URL, typically `\u003cgateway\u003e:8088/data/perspective/client/samplequickstart/`\n- **Docked Views:** When configuring a docked view in Page Configuration you can choose to dock the view on a specific Page URL with a set primary view, or you can choose to share the view across all pages under Shared Settings.  Each project can configure a Shared Settings that will be “inherited” by all pages in that project, allowing multiple pages to use the same docked views and corner priority settings.\n- **Initial Page URL:** Perspective assumes the initial page within a project will be located at page URL \"/\". When a session is launched, the session will start at the \"/\" page. It\u0027s recommended that the \"home\" or starting view for your project uses a page URL of just \"/\".",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "URL Params"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "URL Parameters",
+              "url": "https://links.inductiveautomation.com/81-docs-perspective-pages-url"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "URL Params Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "Pages can be mounted at URLs that include parameters. These parameters are used to allow a page to be mounted at a dynamic URL, allowing information in the URL to be interpreted as input parameters to the page’s primary view. Our dynamic URL mounting uses a colon to signify that a portion of the URL is meant to by dynamic and map to an input parameter on the page’s primary view. ",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Quick Start Page Configuration"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "-----\n### Quick Start Page Configuration"
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Image"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "fit": {
+                "mode": "contain"
+              },
+              "source": "/system/images/sample-images/Quickstart Page Config.png"
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "meta": {
+              "name": "Quick Start Navigation"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "As seen above, the Quick Start project\u0027s page configuration includes multiple entries which fall into the following categories:\n- **/** The initial page URL opens the `Home/Landing Page` view.\n- **/components** This entry navigates to the `Components/Landing Page`\n- **/components/:folder/:componentView** This single entry defines the parameters `folder` and `componentView` (as denoted by the colon) which correspond to parameters defined on the view `Components/Landing Page`.\n- **/ignition-101/*** These entries each navigate to a primary view and docked views.\n- **/layouts** Similar to **/components**, this entry navigates to the landing page for the `components` section\n- **/layouts/*** These entries navigate to the various layout pages\n- **/old/ignition-101/:folder/:featureView** This entry is an example of how the various **/ignition-101/*** entries could instead be a single parameterized entry\n\n### Quick Start Navigation\nTo navigate to the various pages, the Quick Start project uses several navigation views. Explore them to understand how they work with the page configuration to allow users to navigate the project:\n- **`Components/Nav/Charts`**\n- **`Components/Nav/Containers`**\n- **`Components/Nav/Display`**\n- **`Components/Nav/Embedding`**\n- **`Components/Nav/Input`**\n- **`Components/Nav/Navigation`**\n- **`Components/Nav/Reporting`**\n- **`Components/Nav/Sidebar Dock Nav`**\n- **`Components/Nav/Symbols`**\n- **`Framework/Header Main Nav`**\n- **`Ignition 101/Nav/Application`**\n- **`Ignition 101/Nav/Perspective Features`**",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "style": {
+        "classes": "layouts/ignition-101-margin"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

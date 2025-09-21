@@ -1,0 +1,201 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onShutdown": {
+        "config": {
+          "script": "\tself.session.props.locale \u003d \"en-US\""
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 681,
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "Localization",
+              "url": "https://links.inductiveautomation.com/81-plat-localization"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "markdown": {
+                "escapeHtml": false
+              },
+              "source": "Localization allows you to translate text into multiple languages in a project for display on client screens. The localization feature allows users located in different countries to set their default language so client screens can be displayed in their native language. Text contained in components, that have their properties correctly mapped with localization, will change to reflect the language the user has selected.\n\u003cbr\u003e\u003cbr\u003e\nSelect a language below and see the translations applied immediately to the HVAC HMI example on the right.",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Language Selection"
+                },
+                "position": {
+                  "basis": "201px"
+                },
+                "props": {
+                  "path": "Ignition 101/Feature Views/Framework/Language Selection",
+                  "style": {
+                    "marginBottom": "20px",
+                    "marginRight": "20px"
+                  },
+                  "useDefaultViewHeight": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Embedded View"
+                    },
+                    "position": {
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "Ignition 101/Feature Views/Framework/Air Handling",
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Air Handling"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "props": {
+                  "alignContent": "flex-start",
+                  "direction": "column",
+                  "style": {
+                    "borderBottomLeftRadius": "10px",
+                    "borderBottomRightRadius": "10px",
+                    "borderColor": "var(--neutral-50)",
+                    "borderStyle": "solid",
+                    "borderTopLeftRadius": "10px",
+                    "borderTopRightRadius": "10px",
+                    "borderWidth": "1px",
+                    "height": "360px",
+                    "marginBottom": "20px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Examples"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "center",
+              "justify": "center",
+              "style": {
+                "overflow": "visible",
+                "padding": "10px"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Perspective Features/Localization",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

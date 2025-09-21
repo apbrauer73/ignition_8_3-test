@@ -1,0 +1,135 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 700
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HorizontalMenu"
+        },
+        "position": {
+          "basis": "56px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.items[0].style.classes": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "code": "\t# default startup page\n\tif value \u003d\u003d \u0027/\u0027:\n\t\treturn \"framework/header-selected\"\n\telif (value.find(\"ignition-101\") \u003e\u003d 0):\n\t\treturn \"framework/header-selected\"\n\telse:\n\t\treturn \"\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items[1].style.classes": {
+            "binding": {
+              "config": {
+                "expression": "indexOf({page.props.path},\"layouts\")"
+              },
+              "transforms": [
+                {
+                  "fallback": "",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 100,
+                        "min": 0
+                      },
+                      "output": "framework/header-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.items[2].style.classes": {
+            "binding": {
+              "config": {
+                "expression": "indexOf({page.props.path},\"components\")"
+              },
+              "transforms": [
+                {
+                  "fallback": "",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 100,
+                        "min": 0
+                      },
+                      "output": "framework/header-selected"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "items": [
+            {
+              "enabled": true,
+              "icon": {
+                "color": "",
+                "path": ""
+              },
+              "items": [],
+              "label": "Ignition 101",
+              "style": {},
+              "target": "/ignition-101/home/welcome"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": ""
+              },
+              "items": [],
+              "label": "Layouts",
+              "style": {},
+              "target": "/layouts"
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": ""
+              },
+              "items": [],
+              "label": "Components",
+              "style": {},
+              "target": "/components/charts/chart-range-selector"
+            }
+          ],
+          "style": {
+            "border": "none"
+          }
+        },
+        "type": "ia.navigation.horizontalmenu"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

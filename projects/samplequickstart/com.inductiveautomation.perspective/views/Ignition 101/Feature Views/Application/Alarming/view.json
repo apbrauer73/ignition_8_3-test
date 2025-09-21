@@ -1,0 +1,870 @@
+{
+  "custom": {},
+  "params": {},
+  "propConfig": {
+    "params.feature": {
+      "paramDirection": "input"
+    },
+    "params.key": {
+      "paramDirection": "input"
+    },
+    "params.tier1": {
+      "paramDirection": "input"
+    },
+    "params.tier2": {
+      "paramDirection": "input"
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontSize": "20px"
+              },
+              "target": "tab",
+              "text": "Alarming",
+              "url": "https://links.inductiveautomation.com/81-alarming"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "Alarming is built into the Ignition Platform and is defined at a tag level. Each tag can have as many alarms configured as desired. Alarms can be based on a variety of conditions and triggers. Below are some examples of how to view alarms in the visualization."
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Link"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "marginTop": "10px"
+              },
+              "target": "tab",
+              "text": "Learn more about configuring alarms",
+              "url": "https://links.inductiveautomation.com/81-docs-config-alarms\t"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Example Alarms"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "components/title-label",
+                "marginTop": "10px"
+              },
+              "text": "Example Alarms",
+              "textStyle": {
+                "fontWeight": "600"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Example Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "Use these samples to trigger real alarms and see the alarms appear in the status table below. ",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Title"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "borderBottomColor": "var(--neutral-60)",
+                        "borderBottomStyle": "solid",
+                        "borderBottomWidth": "1px",
+                        "padding": "15px"
+                      },
+                      "text": "Individual Alarm"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Toggle Switch"
+                        },
+                        "position": {
+                          "basis": "36px"
+                        },
+                        "propConfig": {
+                          "props.selected": {
+                            "binding": {
+                              "config": {
+                                "bidirectional": true,
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Writeable/WriteableBoolean1"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "label": {
+                            "text": "Alarm"
+                          }
+                        },
+                        "type": "ia.input.toggle-switch"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "State Label"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "props": {
+                          "text": "State:"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "State"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "expression": "try(if({[Sample_Tags]Writeable/WriteableBoolean1/Alarms/Fault.IsActive}, \"Active\", \"Cleared\"), \"Cleared\")"
+                              },
+                              "type": "expr"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "var(--neutral-70)",
+                            "paddingLeft": "5px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Acked Label"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "props": {
+                          "text": "Acked:"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Acked"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "expression": "try(if({[Sample_Tags]Writeable/WriteableBoolean1/Alarms/Fault.IsAcked}, \"Yes by \" + {[Sample_Tags]Writeable/WriteableBoolean1/Alarms/Fault.AckUser}, \"No\"), \"No\")"
+                              },
+                              "type": "expr"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "var(--neutral-70)",
+                            "paddingLeft": "5px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Last Active Time Label"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "props": {
+                          "text": "Last Active Time:"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "hasDelegate": true,
+                          "name": "Last Active Time"
+                        },
+                        "position": {
+                          "basis": "20px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "expression": "try(dateFormat(toDate({[Sample_Tags]Writeable/WriteableBoolean1/Alarms/Fault.ActiveTime}), \"yyyy-MM-dd HH:mm:ss\"), \"\")"
+                              },
+                              "type": "expr"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "var(--neutral-70)",
+                            "paddingLeft": "5px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Container"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "classes": "Card_Container",
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Tag Path"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "borderTopColor": "var(--neutral-60)",
+                        "borderTopStyle": "solid",
+                        "borderTopWidth": "1px",
+                        "marginTop": "5px",
+                        "paddingTop": "5px"
+                      },
+                      "text": "[Sample_Tags]Writeable/WriteableBoolean1",
+                      "textStyle": {
+                        "fontSize": "80%",
+                        "textAlign": "start"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Fault"
+                },
+                "position": {
+                  "basis": "300px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-60)",
+                    "borderStyle": "solid",
+                    "borderWidth": "1px",
+                    "height": "240px",
+                    "margin": "5px",
+                    "overflow": "visible",
+                    "padding": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Title"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "borderBottomColor": "var(--neutral-60)",
+                        "borderBottomStyle": "solid",
+                        "borderBottomWidth": "1px",
+                        "padding": "15px"
+                      },
+                      "text": "Multiple Alarms"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Slider"
+                        },
+                        "position": {
+                          "basis": "20px",
+                          "shrink": 0
+                        },
+                        "propConfig": {
+                          "props.value": {
+                            "binding": {
+                              "config": {
+                                "bidirectional": true,
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[Sample_Tags]Writeable/WriteableInteger1"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "orientation": "vertical"
+                        },
+                        "type": "ia.input.slider"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Linear Scale"
+                            },
+                            "props": {
+                              "fineTicks": {
+                                "color": "#2E2E2E",
+                                "length": 1
+                              },
+                              "indicators": [
+                                {
+                                  "color": "#FFCCCC",
+                                  "extent": 10,
+                                  "indicatorStyle": "range",
+                                  "label": "",
+                                  "labelAngle": 270,
+                                  "labelColor": "#000000",
+                                  "length": 25,
+                                  "opacity": 1,
+                                  "stroke": 1.5,
+                                  "value": 90
+                                },
+                                {
+                                  "color": "#FFE8CC",
+                                  "extent": 10,
+                                  "indicatorStyle": "range",
+                                  "label": "",
+                                  "labelAngle": 270,
+                                  "labelColor": "#000000",
+                                  "length": 25,
+                                  "opacity": 1,
+                                  "stroke": 5,
+                                  "value": 0
+                                }
+                              ],
+                              "labels": {
+                                "style": {
+                                  "color": "#2E2E2E",
+                                  "fontSize": "12px"
+                                }
+                              },
+                              "majorTicks": {
+                                "color": "#2E2E2E"
+                              },
+                              "minorTicks": {
+                                "color": "#2E2E2E"
+                              },
+                              "mirror": true,
+                              "style": {
+                                "height": "auto"
+                              }
+                            },
+                            "type": "ia.display.linear-scale"
+                          }
+                        ],
+                        "meta": {
+                          "name": "Flex Container"
+                        },
+                        "position": {
+                          "basis": "100px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Name Label"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Name:"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Name"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "if(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.IsActive}, false), \"Lo\", \r\nif(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.isActive}, false), \"Hi\", \"\"))"
+                                  },
+                                  "type": "expr"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "color": "var(--neutral-80)",
+                                "paddingLeft": "5px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "State Label"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "State:"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "State"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "if({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.isActive} || {[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.isActive}, \"Active\", \"Cleared\")"
+                                  },
+                                  "type": "expr"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "color": "var(--neutral-80)",
+                                "paddingLeft": "5px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Acked Label"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Acked:"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Acked"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "if(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.isAcked}, false),\r\n\"Yes by \" + {[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.ackUser},\r\nif(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.isAcked}, false), \"Yes by \" + {[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.ackUser}, \"No\"))"
+                                  },
+                                  "type": "expr"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "color": "var(--neutral-80)",
+                                "paddingLeft": "5px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Last Active Time Label"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Last Active Time:"
+                            },
+                            "type": "ia.display.label"
+                          },
+                          {
+                            "meta": {
+                              "hasDelegate": true,
+                              "name": "Last Active Time"
+                            },
+                            "position": {
+                              "basis": "20px",
+                              "shrink": 0
+                            },
+                            "propConfig": {
+                              "props.text": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "if(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.isActive}, false),\r\ndateFormat(toDate({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Lo.activeTime}), \"yyyy-MM-dd HH:mm:ss\"),\r\nif(coalesce({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.isActive}, false), dateFormat(toDate({[Sample_Tags]Writeable/WriteableInteger1/Alarms/Hi.activeTime}), \"yyyy-MM-dd HH:mm:ss\"), \"\"))"
+                                  },
+                                  "type": "expr"
+                                }
+                              }
+                            },
+                            "props": {
+                              "style": {
+                                "color": "var(--neutral-80)",
+                                "paddingLeft": "5px"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "State Container"
+                        },
+                        "position": {
+                          "basis": "200px"
+                        },
+                        "props": {
+                          "alignContent": "flex-start",
+                          "alignItems": "flex-start",
+                          "direction": "column",
+                          "style": {
+                            "overflow": "visible"
+                          }
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "Container"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "marginTop": "5px",
+                        "overflow": "visible"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "hasDelegate": true,
+                      "name": "Tag Path"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "borderTopColor": "var(--neutral-60)",
+                        "borderTopStyle": "solid",
+                        "borderTopWidth": "1px",
+                        "marginTop": "10px",
+                        "paddingTop": "5px"
+                      },
+                      "text": "[Sample_Tags]Writeable/WriteableInteger1",
+                      "textStyle": {
+                        "fontSize": "80%",
+                        "textAlign": "start"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Level"
+                },
+                "position": {
+                  "basis": "300px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "borderColor": "var(--neutral-60)",
+                    "borderStyle": "solid",
+                    "borderWidth": "1px",
+                    "height": "240px",
+                    "margin": "5px",
+                    "overflow": "visible",
+                    "padding": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Flex Container"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignItems": "flex-start",
+              "style": {
+                "maxWidth": "700px"
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Current Alarms Heading"
+            },
+            "position": {
+              "basis": "32px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontWeight": "bold",
+                "marginTop": "10px",
+                "textAlign": "left"
+              },
+              "target": "tab",
+              "text": "Current Alarm Status",
+              "url": "https://links.inductiveautomation.com/81-perspective-ast"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Current Alarms Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "The Alarm Status Table component is used for viewing all active alarms. From here you can also view details, filter, and acknowledge alarms.",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Alarm Status Table"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.display.alarmstatustable"
+          },
+          {
+            "meta": {
+              "name": "Historical Alarms Heading"
+            },
+            "position": {
+              "basis": "32px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "framework/hyperlink",
+                "fontWeight": "bold",
+                "marginTop": "10px",
+                "textAlign": "left"
+              },
+              "target": "tab",
+              "text": "Historical Alarms",
+              "url": "https://links.inductiveautomation.com/81-perspective-ajt"
+            },
+            "type": "ia.navigation.link"
+          },
+          {
+            "meta": {
+              "name": "Historical Alarms Description"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "source": "Alarm Events are logged to the Alarm Journal in the database. The Alarm Journal component is used to easily view the alarm history.",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "meta": {
+              "name": "Alarm Journal Table"
+            },
+            "position": {
+              "basis": "400px",
+              "shrink": 0
+            },
+            "props": {
+              "name": "Sample_Alarm_Journal_Profile"
+            },
+            "type": "ia.display.alarmjournaltable"
+          }
+        ],
+        "meta": {
+          "name": "Flex Container"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Path"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "var(--info)",
+            "color": "var(--neutral-10)",
+            "fontSize": "12px"
+          },
+          "text": "Open this view in the Designer: Ignition 101/Feature Views/Application/Alarming",
+          "textStyle": {
+            "fontWeight": "500",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

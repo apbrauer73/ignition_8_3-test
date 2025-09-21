@@ -1,0 +1,928 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 893
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Valve",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-valve"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "text": "The Valve component is a smart symbol which can be customized to match the desired look of your application. Below are some the properties that can be adjusted in the designer. "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Valve"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "animated": false,
+              "appearance": "simple",
+              "label": {
+                "justify": "left",
+                "location": "hidden"
+              },
+              "reverseFlow": true,
+              "state": "partiallyClosed",
+              "style": {
+                "borderColor": "#0C53FC",
+                "borderStyle": "dotted",
+                "borderWidth": "1px",
+                "marginBottom": "20px",
+                "marginTop": "20px",
+                "padding": "4px",
+                "width": 200
+              },
+              "value": {
+                "justify": "left",
+                "location": "hidden"
+              }
+            },
+            "type": "ia.symbol.valve"
+          }
+        ],
+        "meta": {
+          "name": "Valve Container"
+        },
+        "position": {
+          "basis": "250px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Title"
+                },
+                "props": {
+                  "style": {
+                    "classes": "components/title-label",
+                    "fontSize": "1.2em",
+                    "fontWeight": "bolder",
+                    "marginBottom": "10px",
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  },
+                  "text": "Valve"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Appearance"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.appearance"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Simple",
+                          "value": "simple"
+                        },
+                        {
+                          "label": "P\u0026ID",
+                          "value": "p\u0026id"
+                        },
+                        {
+                          "label": "Mimic",
+                          "value": "mimic"
+                        },
+                        {
+                          "label": "Auto",
+                          "value": "auto"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Appearance"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Animation Speed"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Numeric Entry Field"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.animationSpeed"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  }
+                ],
+                "meta": {
+                  "name": "Animated"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "State"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.state"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "allowCustomOptions": true,
+                      "options": [
+                        {
+                          "label": "Default",
+                          "value": "default"
+                        },
+                        {
+                          "label": "Open",
+                          "value": "open"
+                        },
+                        {
+                          "label": "Failed To Open",
+                          "value": "failedToOpen"
+                        },
+                        {
+                          "label": "Partially Closed",
+                          "value": "partiallyClosed"
+                        },
+                        {
+                          "label": "Closed",
+                          "value": "closed"
+                        },
+                        {
+                          "label": "Failed To Close",
+                          "value": "failedToClose"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "State"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Handle Location"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.valve"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Top",
+                          "value": "top"
+                        },
+                        {
+                          "label": "Bottom",
+                          "value": "bottom"
+                        },
+                        {
+                          "label": "Left",
+                          "value": "left"
+                        },
+                        {
+                          "label": "Right",
+                          "value": "right"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Orientation"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Checkbox"
+                },
+                "position": {
+                  "basis": "30px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.selected": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "..../Valve Container/Valve.props.reverseFlow"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "text": "Reverse Flow"
+                },
+                "type": "ia.input.checkbox"
+              }
+            ],
+            "meta": {
+              "name": "Border"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "padding": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Valve Props"
+        },
+        "position": {
+          "basis": "215px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "marginBottom": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Title"
+                },
+                "props": {
+                  "style": {
+                    "classes": "components/title-label",
+                    "fontSize": "1.2em",
+                    "fontWeight": "bolder",
+                    "marginBottom": "10px",
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  },
+                  "text": "Value"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Text"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Text Field"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.value.text"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "placeholder": "Motor"
+                    },
+                    "type": "ia.input.text-field"
+                  }
+                ],
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Location"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.value.location"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Top",
+                          "value": "top"
+                        },
+                        {
+                          "label": "Bottom",
+                          "value": "bottom"
+                        },
+                        {
+                          "label": "Left",
+                          "value": "left"
+                        },
+                        {
+                          "label": "Right",
+                          "value": "right"
+                        },
+                        {
+                          "label": "Hidden",
+                          "value": "hidden"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Orientation"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Justify"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.value.justify"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Left",
+                          "value": "left"
+                        },
+                        {
+                          "label": "Center",
+                          "value": "center"
+                        },
+                        {
+                          "label": "Right",
+                          "value": "right"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Justify"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Border"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "padding": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Value Props"
+        },
+        "position": {
+          "basis": "150px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "marginBottom": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Title"
+                },
+                "props": {
+                  "style": {
+                    "classes": "components/title-label",
+                    "fontSize": "1.2em",
+                    "fontWeight": "bolder",
+                    "marginBottom": "10px",
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  },
+                  "text": "Label"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Text"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Text Field"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.label.text"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "placeholder": "Motor"
+                    },
+                    "type": "ia.input.text-field"
+                  }
+                ],
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Location"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.label.location"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Top",
+                          "value": "top"
+                        },
+                        {
+                          "label": "Bottom",
+                          "value": "bottom"
+                        },
+                        {
+                          "label": "Left",
+                          "value": "left"
+                        },
+                        {
+                          "label": "Right",
+                          "value": "right"
+                        },
+                        {
+                          "label": "Hidden",
+                          "value": "hidden"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Orientation"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "props": {
+                      "text": "Justify"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "200px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "...../Valve Container/Valve.props.label.justify"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Left",
+                          "value": "left"
+                        },
+                        {
+                          "label": "Center",
+                          "value": "center"
+                        },
+                        {
+                          "label": "Right",
+                          "value": "right"
+                        }
+                      ]
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "Justify"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "style": {
+                    "alignSelf": "stretch",
+                    "classes": "components/row-label"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Border"
+            },
+            "position": {
+              "basis": "400px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderStyle": "solid",
+                "borderWidth": "2px",
+                "padding": "10px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Label Props"
+        },
+        "position": {
+          "basis": "150px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "marginBottom": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Title"
+        },
+        "position": {
+          "basis": "56px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "framework/hyperlink framework/page-title"
+          },
+          "target": "tab",
+          "text": "Equipment Schedule",
+          "url": "https://links.inductiveautomation.com/81-perspective-comp-equipment-schedule"
+        },
+        "type": "ia.navigation.link"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "marginBottom": "20px"
+          },
+          "text": "The Equipment Schedule view is a mix between the status chart, gantt chart, and a calendar view. It conveys equipment scheduling information in a concise and easily digestible format."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Equipment Schedule"
+        },
+        "position": {
+          "basis": "346px",
+          "shrink": 0
+        },
+        "props": {
+          "addEnabled": false,
+          "dateRange": {
+            "endDate": {
+              "$": [
+                "ts",
+                0,
+                1650630631905
+              ],
+              "$ts": 1650661200000
+            },
+            "startDate": {
+              "$": [
+                "ts",
+                0,
+                1650488065820
+              ],
+              "$ts": 1650283200000
+            }
+          },
+          "defaultZoom": "12-hr",
+          "deleteEnabled": false,
+          "downtimeEvents": [
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650377137000
+              },
+              "itemId": 1,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650371811000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "#AAAAAAB3",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650686400000
+              },
+              "itemId": 3,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650254400000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650388480000
+              },
+              "itemId": 2,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650388035000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650395331000
+              },
+              "itemId": 2,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650394586000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650443501000
+              },
+              "itemId": 2,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650436942000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1704085200000
+              },
+              "itemId": 2,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650451653000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650294839000
+              },
+              "itemId": 4,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650289670000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650351822000
+              },
+              "itemId": 4,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650349512000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650389837000
+              },
+              "itemId": 4,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650633010679
+                ],
+                "$ts": 1650383674000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            },
+            {
+              "color": "",
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650528831000
+                ],
+                "$ts": 1650528831000
+              },
+              "itemId": 4,
+              "opacity": 1,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650480971000
+                ],
+                "$ts": 1650480971000
+              },
+              "style": {
+                "classes": ""
+              },
+              "underlay": false
+            }
+          ],
+          "items": [
+            {
+              "headerStyle": {
+                "classes": ""
+              },
+              "iconConfig": {
+                "color": "",
+                "path": "material/play_circle_filled",
+                "style": {}
+              },
+              "id": 1,
+              "label": "Winder 1",
+              "rowStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "headerStyle": {
+                "classes": ""
+              },
+              "iconConfig": {
+                "color": "",
+                "path": "material/warning",
+                "style": {}
+              },
+              "id": 2,
+              "label": "Winder 2",
+              "rowStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "headerStyle": {
+                "classes": ""
+              },
+              "iconConfig": {
+                "color": "",
+                "path": "material/stop_circle",
+                "style": {}
+              },
+              "id": 3,
+              "label": "Winder 3",
+              "rowStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "headerStyle": {
+                "classes": ""
+              },
+              "iconConfig": {
+                "color": "",
+                "path": "material/play_circle_filled",
+                "style": {}
+              },
+              "id": 4,
+              "label": "Winder 4",
+              "rowStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "moveEnabled": false,
+          "resizeEnabled": false,
+          "rowHeight": 60,
+          "scheduledEvents": [
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650470400000
+              },
+              "eventId": 9081265,
+              "itemId": 1,
+              "label": 1134721,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 21600,
+              "percentDone": 78,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650283200000
+              },
+              "style": {
+                "classes": ""
+              }
+            },
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650585600000
+              },
+              "eventId": 9098146,
+              "itemId": 2,
+              "label": 1098446,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 7200,
+              "percentDone": 18.6,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650378600000
+              },
+              "style": {
+                "classes": ""
+              }
+            },
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650499200000
+              },
+              "eventId": 9098147,
+              "itemId": 2,
+              "label": 1022943,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 5400,
+              "percentDone": 0,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650378600000
+              },
+              "style": {
+                "classes": ""
+              }
+            },
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650384000000
+              },
+              "eventId": 9053219,
+              "itemId": 4,
+              "label": 1108654,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 1800,
+              "percentDone": 100,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650283200000
+              },
+              "style": {
+                "classes": ""
+              }
+            },
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650466800000
+              },
+              "eventId": 9053220,
+              "itemId": 4,
+              "label": 1095316,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 1800,
+              "percentDone": 100,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631812371
+                ],
+                "$ts": 1650384000000
+              },
+              "style": {
+                "classes": ""
+              }
+            },
+            {
+              "endDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631831918
+                ],
+                "$ts": 1650661200000
+              },
+              "eventId": 9053221,
+              "itemId": 4,
+              "label": 1121565,
+              "leadStyle": {
+                "classes": ""
+              },
+              "leadTime": 3600,
+              "percentDone": 5,
+              "startDate": {
+                "$": [
+                  "ts",
+                  0,
+                  1650631822332
+                ],
+                "$ts": 1650466800000
+              },
+              "style": {
+                "classes": ""
+              }
+            }
+          ],
+          "selectedEvent": {
+            "eventId": 9081265,
+            "itemId": 1
+          }
+        },
+        "type": "ia.display.equipmentschedule"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

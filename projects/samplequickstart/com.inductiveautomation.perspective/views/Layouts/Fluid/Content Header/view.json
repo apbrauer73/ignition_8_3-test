@@ -1,0 +1,39 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 56
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Embedded View"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "label": "content header"
+          },
+          "path": "Layouts/Framework/Container Label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center",
+      "style": {
+        "classes": "layouts/gray-80"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

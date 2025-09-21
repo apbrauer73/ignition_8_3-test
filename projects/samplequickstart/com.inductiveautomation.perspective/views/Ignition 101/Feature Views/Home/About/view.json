@@ -1,0 +1,51 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Quick Start Description"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "source": "### Quick Start Page Configuration\nThe Quick Start project\u0027s page configuration includes various types of entries:\n- **Ignition 101:** This section includes an entry per page defining primary and docked views. All of these entries start with `/ignition-101`\n- **Layouts:** Similar to Ignition 101, this section includes individual page entries begging with `/layout`\n- **Components:** This section utilizes URL parameterization. The single entry `/components/:folder/:componentView` defines parameters `folder` and `componentView` which correspond to parameters defined on the view `Components/Landing Page`.\n\n### Quick Start Navigation\nTo navigate to the various pages, the Quick Start project uses several navigation views. Explore them to understand how they work with the page configuration to allow users to navigate the project:\n- **`Components/Nav/Charts`**\n- **`Components/Nav/Containers`**\n- **`Components/Nav/Display`**\n- **`Components/Nav/Embedding`**\n- **`Components/Nav/Input`**\n- **`Components/Nav/Navigation`**\n- **`Components/Nav/Reporting`**\n- **`Components/Nav/Sidebar Dock Nav`**\n- **`Components/Nav/Symbols`**\n- **`Framework/Header Main Nav`**\n- **`Ignition 101/Nav/Application`**\n- **`Ignition 101/Nav/Perspective Features`**",
+              "style": {
+                "marginBottom": "10px"
+              }
+            },
+            "type": "ia.display.markdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "flex-start",
+          "style": {
+            "classes": "layouts/ignition-101-margin"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

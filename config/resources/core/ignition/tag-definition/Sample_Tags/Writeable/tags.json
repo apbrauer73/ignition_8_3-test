@@ -1,0 +1,163 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableInteger3",
+    "dataType": "Int4",
+    "name": "WriteableInteger3",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableFloat2",
+    "dataType": "Float4",
+    "name": "WriteableFloat2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableBoolean2",
+    "dataType": "Boolean",
+    "name": "WriteableBoolean2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableLong1",
+    "dataType": "Int8",
+    "name": "WriteableLong1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableInteger5",
+    "dataType": "Int4",
+    "name": "WriteableInteger5",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableString1",
+    "dataType": "String",
+    "name": "WriteableString1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableInteger1",
+    "dataType": "Int4",
+    "alarms": [
+      {
+        "mode": "AboveValue",
+        "setpointA": 90.0,
+        "notes": "Level is too high",
+        "name": "Hi",
+        "priority": "Critical",
+        "displayPath": "Level Hi Alarm"
+      },
+      {
+        "mode": "BelowValue",
+        "setpointA": 10.0,
+        "notes": "The level is too low",
+        "name": "Lo",
+        "priority": "Medium",
+        "displayPath": "Level Lo Alarm"
+      }
+    ],
+    "name": "WriteableInteger1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableLong2",
+    "dataType": "Int8",
+    "name": "WriteableLong2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableFloat1",
+    "dataType": "Float4",
+    "name": "WriteableFloat1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableString2",
+    "dataType": "String",
+    "name": "WriteableString2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableShort2",
+    "dataType": "Int2",
+    "name": "WriteableShort2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableInteger4",
+    "dataType": "Int4",
+    "name": "WriteableInteger4",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableInteger2",
+    "dataType": "Int4",
+    "name": "WriteableInteger2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableDouble2",
+    "dataType": "Float8",
+    "name": "WriteableDouble2",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableShort1",
+    "dataType": "Int2",
+    "name": "WriteableShort1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableBoolean1",
+    "dataType": "Boolean",
+    "alarms": [
+      {
+        "setpointA": 1.0,
+        "name": "Fault",
+        "displayPath": "Alarm Fault"
+      }
+    ],
+    "name": "WriteableBoolean1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[Sample_Device]_Meta:Writeable/WriteableDouble1",
+    "dataType": "Float8",
+    "name": "WriteableDouble1",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]
