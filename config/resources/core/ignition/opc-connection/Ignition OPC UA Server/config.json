@@ -22,11 +22,11 @@
     "authentication": {
       "password": {
         "data": {
-          "ciphertext": "xoSVFtpXULv7gA",
-          "encrypted_key": "WDhXMUaTwS5m0i6Wucc6bAbSrDQMXu9XiCdwlqfztjDf6LSrlTb5dw",
-          "iv": "5u77L2aS00edbcn5",
-          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU2Nzc3NDQ4LCJ6aXAiOiJERUYifQ",
-          "tag": "CgDUdd8OUGKYud1VeTmJJw"
+          "ciphertext": "OPecXnUnkEZP9A",
+          "encrypted_key": "5PUMTqZMcHZam1_rWLZkA2Zgo_WvUAfPWhnUO0XsH1PVi5ocOhVE9A",
+          "iv": "GaixBHFMfEHhJJtX",
+          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU4Njc3MjQ1LCJ6aXAiOiJERUYifQ",
+          "tag": "LMmxy55CXIZlI_n9wjb8WQ"
         },
         "type": "Embedded"
       },
@@ -56,11 +56,11 @@
       "keyStoreAlias": "client",
       "keyStoreAliasPassword": {
         "data": {
-          "ciphertext": "tFPKUw0negIzGw",
-          "encrypted_key": "JbC_X1rTVPDfpWt2icBLUa67gC3_9ydae7IkhPQy1fnMBcHTXVCBaw",
-          "iv": "GBHOgZcBicqno408",
-          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU2Nzc3NDQ4LCJ6aXAiOiJERUYifQ",
-          "tag": "mztn_rpLQxfslYfsxLumhg"
+          "ciphertext": "aP0PtZkVwHDLTQ",
+          "encrypted_key": "ElGOlRzL_k8FyjRPjGnrPrHYX_bietMmIY6p6odNWXX_N59jB_We3Q",
+          "iv": "9LOxFhpCCnKYbc3A",
+          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU4Njc3MjQ1LCJ6aXAiOiJERUYifQ",
+          "tag": "IJVIyBkR9rHndb2o4sqCsA"
         },
         "type": "Embedded"
       }

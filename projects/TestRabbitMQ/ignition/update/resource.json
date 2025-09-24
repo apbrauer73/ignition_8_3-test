@@ -7,11 +7,11 @@
     "onUpdate.py"
   ],
   "attributes": {
-    "lastModificationSignature": "c7d5f93434dff54917129686dd0781cb5d60f1e00653b05788c38d53894f09c0",
+    "lastModificationSignature": "5ff1fad1642fac4238bd9e13a1b210449829c805b5b27bf997f13deadb08892c",
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2025-09-17T02:01:42Z"
+      "timestamp": "2025-09-24T01:46:05Z"
     },
-    "enabled": false
+    "enabled": true
   }
 }

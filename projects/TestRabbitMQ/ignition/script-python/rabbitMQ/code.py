@@ -230,4 +230,3 @@ def stop_consumer():
     except Exception as e:
         system.util.getLogger("RabbitMQ").error("Error stopping RabbitMQ consumer: " + str(e))
 
-

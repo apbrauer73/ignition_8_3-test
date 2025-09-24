@@ -1,0 +1,17 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "onUpdate.py"
+  ],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2025-09-17T02:01:42Z"
+    },
+    "lastModificationSignature": "c7d5f93434dff54917129686dd0781cb5d60f1e00653b05788c38d53894f09c0",
+    "enabled": false
+  }
+}
