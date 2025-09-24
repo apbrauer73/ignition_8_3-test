@@ -1,5 +1,5 @@
 {
-  "finished": false,
+  "finished": true,
   "steps": [
     {
       "completed": true,
@@ -18,7 +18,7 @@
       "name": "PROJECT"
     },
     {
-      "completed": false,
+      "completed": true,
       "name": "SESSION"
     }
   ]

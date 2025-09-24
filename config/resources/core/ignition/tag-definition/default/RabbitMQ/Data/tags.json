@@ -1,11 +1,8 @@
 [
   {
     "valueSource": "memory",
-    "valuePersistence": "Configuration",
     "dataType": "String",
     "name": "action",
-    "defaultValue": "up",
-    "value": "up",
     "tagType": "AtomicTag"
   }
 ]

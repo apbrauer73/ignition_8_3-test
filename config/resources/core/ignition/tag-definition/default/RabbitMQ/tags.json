@@ -1,29 +1,20 @@
 [
   {
     "valueSource": "memory",
-    "valuePersistence": "Configuration",
     "dataType": "String",
     "name": "LastMessage",
-    "defaultValue": "{\u0027action\u0027: \u0027up\u0027}",
-    "value": "{\u0027action\u0027: \u0027up\u0027}",
     "tagType": "AtomicTag"
   },
   {
     "valueSource": "memory",
-    "valuePersistence": "Configuration",
     "name": "MessageCount",
-    "defaultValue": 50,
-    "value": 50,
     "tagType": "AtomicTag"
   },
   {
     "valueSource": "memory",
-    "valuePersistence": "Configuration",
     "dataType": "DateTime",
     "name": "LastMessageTime",
-    "defaultValue": 1758417062432,
     "formatString": "yyyy-MM-dd h:mm:ss aa",
-    "value": 1758417062432,
     "tagType": "AtomicTag"
   }
 ]
