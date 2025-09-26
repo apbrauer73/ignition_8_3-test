@@ -2,6 +2,12 @@
   {
     "valueSource": "memory",
     "dataType": "String",
+    "name": "mappedData",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "String",
     "name": "action",
     "tagType": "AtomicTag"
   }

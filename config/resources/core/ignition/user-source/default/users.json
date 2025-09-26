@@ -23,6 +23,12 @@
       "rolename": "Administrator",
       "createdDate": "20250923.202556560-0500",
       "lastModifiedDate": "20250923.202556560-0500"
+    },
+    {
+      "uuid": "789e7483-5994-4779-acf7-330f146fc91d",
+      "rolename": "Operator",
+      "createdDate": "20250925.203923635-0500",
+      "lastModifiedDate": "20250925.203923635-0500"
     }
   ]
 }
