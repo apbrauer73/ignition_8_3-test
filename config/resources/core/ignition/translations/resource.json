@@ -3,25 +3,16 @@
   "version": 1,
   "restricted": false,
   "overridable": true,
-  "files": [
-    "it.json",
-    "es.json",
-    "pt.json",
-    "fr.json",
-    "no.json",
-    "de.json",
-    "en.json",
-    "ko.json"
-  ],
+  "files": [],
   "attributes": {
-    "ignorePunctuation": false,
-    "lastModificationSignature": "c55f25310e43947d64bd5f0ddbb144f86bb8bdfb9e79ec8f4fa711ce5562b526",
-    "ignoreTags": false,
     "lastModification": {
-      "actor": "quickstart",
-      "timestamp": "2025-09-24T01:28:32Z"
+      "actor": "8.3-migration",
+      "timestamp": "2025-10-01T00:52:24Z"
     },
+    "ignorePunctuation": false,
     "caseInsensitive": false,
-    "ignoreWhitespace": false
+    "lastModificationSignature": "4db9eb59c68e64b381c652ff9ae9a9e8fd4ce1d2b49b594fb8b1dfc3e71f7dbb",
+    "ignoreWhitespace": false,
+    "ignoreTags": false
   }
 }

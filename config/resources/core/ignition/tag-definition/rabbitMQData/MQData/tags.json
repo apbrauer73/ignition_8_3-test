@@ -1,0 +1,23 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "String",
+    "name": "LastMessage",
+    "defaultValue": "{\u0027mappedData\u0027: \u0027I am late\u0027}",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DateTime",
+    "name": "LastMessageTime",
+    "defaultValue": 1758917499587,
+    "formatString": "yyyy-MM-dd h:mm:ss aa",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "name": "MessageCount",
+    "defaultValue": 8,
+    "tagType": "AtomicTag"
+  }
+]

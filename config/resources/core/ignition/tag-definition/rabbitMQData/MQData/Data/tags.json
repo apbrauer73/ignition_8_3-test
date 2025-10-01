@@ -1,0 +1,16 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "String",
+    "name": "action",
+    "defaultValue": "do work",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "String",
+    "name": "mappedData",
+    "defaultValue": "I am late",
+    "tagType": "AtomicTag"
+  }
+]

@@ -22,11 +22,11 @@
     "authentication": {
       "password": {
         "data": {
-          "ciphertext": "OPecXnUnkEZP9A",
-          "encrypted_key": "5PUMTqZMcHZam1_rWLZkA2Zgo_WvUAfPWhnUO0XsH1PVi5ocOhVE9A",
-          "iv": "GaixBHFMfEHhJJtX",
-          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU4Njc3MjQ1LCJ6aXAiOiJERUYifQ",
-          "tag": "LMmxy55CXIZlI_n9wjb8WQ"
+          "ciphertext": "nYB62YFxADHBWQ",
+          "encrypted_key": "M_QqcvnSISj-NC12gvCHKYWu1fcKXYXyBk0htZc-I54zF3vJZhLKBw",
+          "iv": "xJdhsBpi4Ce7HGwe",
+          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU5MjgwMDg0LCJ6aXAiOiJERUYifQ",
+          "tag": "8SUa2lRTcfyVrlP0u04qfQ"
         },
         "type": "Embedded"
       },
@@ -56,11 +56,11 @@
       "keyStoreAlias": "client",
       "keyStoreAliasPassword": {
         "data": {
-          "ciphertext": "aP0PtZkVwHDLTQ",
-          "encrypted_key": "ElGOlRzL_k8FyjRPjGnrPrHYX_bietMmIY6p6odNWXX_N59jB_We3Q",
-          "iv": "9LOxFhpCCnKYbc3A",
-          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU4Njc3MjQ1LCJ6aXAiOiJERUYifQ",
-          "tag": "IJVIyBkR9rHndb2o4sqCsA"
+          "ciphertext": "K8ImZbzjKuQ7tA",
+          "encrypted_key": "eD0p38Ge14Ao0DQYjFTo72YdmGQKr4AX5fD21_YFahpzNiCf3A0zeg",
+          "iv": "DswIvcW_21CSMUes",
+          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzU5MjgwMDg0LCJ6aXAiOiJERUYifQ",
+          "tag": "3jGpzhAaPFXmSIg6Gy-bWg"
         },
         "type": "Embedded"
       }

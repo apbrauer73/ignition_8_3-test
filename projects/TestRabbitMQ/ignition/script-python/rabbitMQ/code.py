@@ -8,7 +8,7 @@ from com.rabbitmq.client import ConnectionFactory, Connection, Channel, Consumer
 from com.rabbitmq.client.AMQP import BasicProperties
 
 class RabbitMQConsumer(Runnable):
-	def __init__(self, queue_name, tag_path_prefix="[default]RabbitMQ/"):
+	def __init__(self, queue_name, tag_path_prefix="[rabbitMQData]MQData/"):
 		self.queue_name = queue_name
 		self.tag_path_prefix = tag_path_prefix
 		self.connection = None
