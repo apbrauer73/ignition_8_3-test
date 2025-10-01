@@ -1,0 +1,7 @@
+[
+  {
+    "valueSource": "memory",
+    "name": "triggerScan",
+    "tagType": "AtomicTag"
+  }
+]

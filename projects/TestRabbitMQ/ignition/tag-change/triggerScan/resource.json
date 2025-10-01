@@ -1,0 +1,25 @@
+{
+  "scope": "G",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "onTagChange.py"
+  ],
+  "attributes": {
+    "changeTypes": [
+      "ValueChange",
+      "QualityChange",
+      "TimestampChange"
+    ],
+    "lastModificationSignature": "0d99bcd03d74166857a1e91e704085ac914c3959a8ee88113b0822299d513857",
+    "paths": [
+      "[rabbitMQData]triggerScan"
+    ],
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2025-10-01T19:33:41Z"
+    },
+    "enabled": true
+  }
+}
