@@ -1,0 +1,37 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Barcode"
+        },
+        "position": {
+          "height": 175,
+          "width": 200,
+          "x": 118,
+          "y": 104
+        },
+        "type": "ia.display.barcode"
+      },
+      {
+        "meta": {
+          "name": "LedDisplay"
+        },
+        "position": {
+          "height": 32,
+          "width": 128,
+          "x": 182,
+          "y": 349
+        },
+        "type": "ia.display.led-display"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
