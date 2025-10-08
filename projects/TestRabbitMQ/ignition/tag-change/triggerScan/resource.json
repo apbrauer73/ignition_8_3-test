@@ -12,13 +12,13 @@
       "QualityChange",
       "TimestampChange"
     ],
-    "lastModificationSignature": "dfe6037088c49aad32a8c34f0ce23154dfc8f06491b7afb15dc3574b11609915",
+    "lastModificationSignature": "9d6e714c99a17a874c9ef5a79e15c406bd8717b045523c4ba17d837b0e39f61f",
     "paths": [
       "[rabbitMQData]triggerScan"
     ],
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2025-10-08T00:13:14Z"
+      "timestamp": "2025-10-08T00:22:33Z"
     },
     "enabled": true
   }
