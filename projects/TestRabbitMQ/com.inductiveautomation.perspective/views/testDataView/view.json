@@ -1,0 +1,43 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CylindricalTank"
+        },
+        "position": {
+          "height": 160,
+          "width": 136,
+          "x": 358,
+          "y": 77.5
+        },
+        "props": {
+          "value": 85
+        },
+        "type": "ia.display.cylindrical-tank"
+      },
+      {
+        "meta": {
+          "name": "SimpleGauge"
+        },
+        "position": {
+          "height": 175,
+          "width": 300,
+          "x": 28,
+          "y": 70
+        },
+        "props": {
+          "value": 70
+        },
+        "type": "ia.chart.simple-gauge"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
