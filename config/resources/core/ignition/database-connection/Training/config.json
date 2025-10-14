@@ -1,0 +1,36 @@
+{
+  "connectURL": "jdbc:sqlserver://sql-server-db\\MSSQLSERVER:1433",
+  "connectionProps": "databaseName\u003dTraining",
+  "connectionResetParams": "",
+  "defaultTransactionLevel": "DEFAULT",
+  "driver": "Microsoft SQLServer",
+  "evictionRate": -1,
+  "evictionTests": 3,
+  "evictionTime": 1800000,
+  "failoverMode": "STANDARD",
+  "failoverProfile": "",
+  "includeSchemaInTableName": true,
+  "password": {
+    "data": {
+      "ciphertext": "b3nGhSji-Oo-ooZCUzsm",
+      "encrypted_key": "_IBRSYkouAd1QmQCWiKcTtK5m5kCHcuGDqCEN26oAKEU7fsT87dhcw",
+      "iv": "YMHJuGqbTZCKNI2S",
+      "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzYwNDczNjgzLCJ6aXAiOiJERUYifQ",
+      "tag": "OEIna05_4llgEIF_6SIHXQ"
+    },
+    "type": "Embedded"
+  },
+  "poolInitSize": 0,
+  "poolMaxActive": 8,
+  "poolMaxIdle": 8,
+  "poolMaxWait": 5000,
+  "poolMinIdle": 0,
+  "slowQueryLogThreshold": 60000,
+  "testOnBorrow": true,
+  "testOnReturn": false,
+  "testWhileIdle": false,
+  "translator": "MSSQL",
+  "username": "sa",
+  "validationQuery": "SELECT 1",
+  "validationSleepTime": 10000
+}
