@@ -17,7 +17,7 @@ class RabbitMQConsumer(Runnable):
 		self.running = False
 		
 		# RabbitMQ connection parameters
-		self.host = "host.docker.internal"  # Update with your RabbitMQ host
+		self.host = "rabbitmq"  # Update with your RabbitMQ host, on linux use the container name
 		self.port = 5672
 		self.username = "admin"
 		self.password = "password"
