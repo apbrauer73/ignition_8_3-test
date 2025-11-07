@@ -63,11 +63,11 @@
     }
   },
   "props": {
-    "address": "192.168.127.1",
+    "address": "172.19.0.1",
     "device": {},
     "geolocation": {},
     "locale": "en-US",
     "offline": {},
-    "timeZoneId": "America/Chicago"
+    "timeZoneId": "Etc/UTC"
   }
 }
